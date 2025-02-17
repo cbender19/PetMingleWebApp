@@ -1,0 +1,115 @@
+﻿@using Microsoft.EntityFrameworkCore
+@using PetMingle.Data
+@using PetMingle.Data.Repositories.Admin;
+@using PetMingle.Data.Repositories.Customer;
+@using PetMingle.Entities;
+@using Microsoft.AspNetCore.Identity;
+@using PetMingle.Services;
+
+@implements IDisposable
+@inherits LayoutComponentBase
+
+@inject IDbContextFactory<DataContext> ContextFactory
+@inject UserManager<ApplicationUser> UserManager
+@inject AuthenticationStateProvider AuthenticationStateProvider
+@inject NavigationManager NavigationManager
+@inject CartServices cartServices
+
+<PageTitle>PetMingle</PageTitle>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<div class="page">
+    <nav>
+        <div class="nav-bar">
+            <div class="nav-home-wrapper">
+                <button class="nav-home" @onclick="RedirectHome">
+                    <div class="home-logo"></div>
+                </button>
+            </div>
+            <AuthorizeView Roles="Admin">
+                <div class="manage-products-wrapper">
+                    <div class="btn-cover"></div>
+                    <NavLink class="nav-manage-products" href="ManageProducts">
+                        Manage
+                        <i class="fa-solid fa-box-open"></i>
+                    </NavLink>
+                </div>
+            </AuthorizeView>
+            <AuthorizeView>
+                <Authorized>
+                    <div class="nav-logout-wrapper">
+                        <div class="btn-cover"></div>
+                        <NavLink class="nav-logout" href="Identity/Account/Logout">
+                            Logout
+                            <i class="fa-solid fa-user"></i>
+                        </NavLink>
+                    </div>
+                </Authorized>
+                <NotAuthorized>
+                    <div class="nav-login-wrapper">
+                        <div class="btn-cover"></div>
+                        <NavLink class="nav-login" href="Identity/Account/Login">
+                            Login
+                            <i class="fa-solid fa-user"></i>
+                        </NavLink>
+                    </div>
+                </NotAuthorized>
+            </AuthorizeView>
+            <div class="nav-cart-wrapper">
+                <div class="btn-cover"></div>
+                <button class="nav-cart" @onclick="ToggleCart">
+                    Cart
+                    <i class="fa-solid fa-cart-shopping"></i>
+                </button>
+            </div>
+            <div class="cart-indicator-wrapper hidden">
+                <div class="cart-indicator"></div>
+            </div>
+        </div>
+    </nav>
+    <main>
+        @Body
+    </main>
+</div>
+
+@code {
+    // Cart?
+    ApplicationUser user = new();
+    List<CartItem> cartItems;
+
+    protected override async Task OnInitializedAsync()
+    {
+        // Subscribe to the event
+        NavigationManager.LocationChanged += LocationChanged;
+        base.OnInitialized();
+    }
+
+    private void LocationChanged(object sender, LocationChangedEventArgs e)
+    {
+        string navigationMethod = e.IsNavigationIntercepted ? "HTML" : "code";
+        System.Diagnostics.Debug.WriteLine($"Notified of navigation via {navigationMethod} to {e.Location}");
+    }
+
+    private bool isAdminDropdownOpen = false;
+    private void ToggleAdminDropDown()
+    {
+        isAdminDropdownOpen = !isAdminDropdownOpen;
+    }
+
+    private void ToggleCart()
+    {
+        cartServices.ShowCart = !cartServices.ShowCart;
+    }
+
+    public void RedirectHome()
+    {
+        NavigationManager.NavigateTo("/");
+    }
+
+    void IDisposable.Dispose()
+    {
+        // Unsubscribe from the event when our component is disposed
+        NavigationManager.LocationChanged -= LocationChanged;
+    }
+}

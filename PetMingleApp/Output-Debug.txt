@@ -1,0 +1,423 @@
+﻿19:24:37:345	'PetMingle.exe' (CoreCLR: DefaultDomain): Loaded 'C:\Program Files\dotnet\shared\Microsoft.NETCore.App\7.0.20\System.Private.CoreLib.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+19:24:37:345	'PetMingle.exe' (CoreCLR: clrhost): Loaded 'C:\Users\Oscar\Desktop\Dec 11 PM\PetMingleApp\PetMingle\bin\Release\net7.0\PetMingle.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+19:24:37:345	Symbols for the module 'PetMingle.dll' were not loaded.
+19:24:37:345	
+19:24:37:345	1. Use a debug build configuration or disable the debug option 'Enable Just My Code'. 
+19:24:37:345	2. Check the 'Symbols' settings under debugging options.'PetMingle.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.NETCore.App\7.0.20\System.Runtime.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+19:24:37:345	'PetMingle.exe' (CoreCLR: clrhost): Loaded 'c:\program files\microsoft visual studio\2022\community\common7\ide\extensions\microsoft\web tools\projectsystem\net7.0\Microsoft.WebTools.ApiEndpointDiscovery.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+19:24:37:345	'PetMingle.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.NETCore.App\7.0.20\System.Linq.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+19:24:37:345	'PetMingle.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.NETCore.App\7.0.20\System.Collections.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+19:24:37:345	'PetMingle.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\SDK\8.0.403\DotnetTools\dotnet-watch\8.0.403-servicing.24469.19\tools\net8.0\any\middleware\Microsoft.AspNetCore.Watch.BrowserRefresh.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+19:24:37:345	'PetMingle.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\Extensions\Microsoft\Web Tools\Browser Link\Microsoft.WebTools.BrowserLink.Net.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+19:24:37:345	'PetMingle.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App\7.0.20\Microsoft.AspNetCore.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+19:24:37:345	'PetMingle.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App\7.0.20\Microsoft.Extensions.Hosting.Abstractions.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+19:24:37:345	'PetMingle.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App\7.0.20\Microsoft.AspNetCore.Http.Abstractions.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+19:24:37:345	'PetMingle.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App\7.0.20\Microsoft.AspNetCore.Routing.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+19:24:37:345	'PetMingle.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.NETCore.App\7.0.20\System.ComponentModel.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+19:24:37:345	'PetMingle.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App\7.0.20\Microsoft.Extensions.Features.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+19:24:37:345	'PetMingle.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App\7.0.20\Microsoft.Extensions.DependencyInjection.Abstractions.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+19:24:37:345	'PetMingle.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App\7.0.20\Microsoft.AspNetCore.Mvc.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+19:24:37:345	'PetMingle.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App\7.0.20\Microsoft.AspNetCore.Mvc.Core.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+19:24:37:345	'PetMingle.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App\7.0.20\Microsoft.AspNetCore.Components.Server.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+19:24:37:345	'PetMingle.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App\7.0.20\Microsoft.Extensions.Configuration.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+19:24:37:345	'PetMingle.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App\7.0.20\Microsoft.Extensions.Configuration.Abstractions.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+19:24:37:345	'PetMingle.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App\7.0.20\Microsoft.Extensions.Primitives.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+19:24:37:345	'PetMingle.exe' (CoreCLR: clrhost): Loaded 'C:\Users\Oscar\Desktop\Dec 11 PM\PetMingleApp\PetMingle\bin\Release\net7.0\Microsoft.EntityFrameworkCore.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+19:24:37:345	'PetMingle.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App\7.0.20\Microsoft.Extensions.Logging.Abstractions.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+19:24:37:345	'PetMingle.exe' (CoreCLR: clrhost): Loaded 'C:\Users\Oscar\Desktop\Dec 11 PM\PetMingleApp\PetMingle\bin\Release\net7.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+19:24:37:345	'PetMingle.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App\7.0.20\Microsoft.Extensions.Identity.Stores.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+19:24:37:345	'PetMingle.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App\7.0.20\Microsoft.Extensions.Identity.Core.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+19:24:37:345	'PetMingle.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App\7.0.20\Microsoft.AspNetCore.Identity.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+19:24:37:345	'PetMingle.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App\7.0.20\Microsoft.AspNetCore.Hosting.Abstractions.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+19:24:37:345	'PetMingle.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App\7.0.20\Microsoft.AspNetCore.HttpsPolicy.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+19:24:37:345	'PetMingle.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App\7.0.20\Microsoft.AspNetCore.StaticFiles.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+19:24:37:345	'PetMingle.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App\7.0.20\Microsoft.AspNetCore.SignalR.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+19:24:37:345	'PetMingle.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App\7.0.20\Microsoft.AspNetCore.Mvc.RazorPages.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+19:24:37:345	'PetMingle.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App\7.0.20\Microsoft.AspNetCore.Diagnostics.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+19:24:37:345	'PetMingle.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App\7.0.20\Microsoft.AspNetCore.Hosting.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+19:24:37:345	'PetMingle.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App\7.0.20\Microsoft.Extensions.Hosting.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+19:24:37:345	'PetMingle.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.NETCore.App\7.0.20\System.Threading.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+19:24:37:345	'PetMingle.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App\7.0.20\Microsoft.Extensions.Configuration.EnvironmentVariables.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+19:24:37:345	'PetMingle.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App\7.0.20\Microsoft.Extensions.Logging.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+19:24:37:345	'PetMingle.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App\7.0.20\Microsoft.Extensions.FileProviders.Abstractions.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+19:24:37:345	'PetMingle.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App\7.0.20\Microsoft.Extensions.FileProviders.Physical.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+19:24:37:345	'PetMingle.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App\7.0.20\Microsoft.Extensions.Configuration.FileExtensions.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+19:24:37:345	'PetMingle.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App\7.0.20\Microsoft.Extensions.Options.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+19:24:37:345	'PetMingle.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App\7.0.20\Microsoft.Extensions.Configuration.Binder.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+19:24:37:345	'PetMingle.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App\7.0.20\Microsoft.Extensions.Configuration.Json.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+19:24:37:597	'PetMingle.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.NETCore.App\7.0.20\System.IO.FileSystem.Watcher.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+19:24:37:597	'PetMingle.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.NETCore.App\7.0.20\System.ComponentModel.Primitives.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+19:24:37:597	'PetMingle.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.NETCore.App\7.0.20\System.Collections.Concurrent.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+19:24:37:597	'PetMingle.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.NETCore.App\7.0.20\System.Memory.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+19:24:37:597	'PetMingle.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.NETCore.App\7.0.20\System.Threading.Overlapped.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+19:24:37:597	'PetMingle.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.NETCore.App\7.0.20\System.Runtime.InteropServices.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+19:24:37:597	'PetMingle.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.NETCore.App\7.0.20\Microsoft.Win32.Primitives.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+19:24:37:597	'PetMingle.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.NETCore.App\7.0.20\System.Text.Json.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+19:24:37:597	'PetMingle.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.NETCore.App\7.0.20\System.Text.Encoding.Extensions.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+19:24:37:597	'PetMingle.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.NETCore.App\7.0.20\System.Numerics.Vectors.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+19:24:37:597	'PetMingle.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App\7.0.20\Microsoft.Extensions.Configuration.UserSecrets.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+19:24:37:597	'PetMingle.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App\7.0.20\Microsoft.AspNetCore.Razor.Runtime.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+19:24:37:597	'PetMingle.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App\7.0.20\Microsoft.Extensions.Logging.EventLog.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+19:24:37:597	'PetMingle.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App\7.0.20\Microsoft.Extensions.Logging.Configuration.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+19:24:37:597	'PetMingle.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App\7.0.20\Microsoft.Extensions.Options.ConfigurationExtensions.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+19:24:37:597	'PetMingle.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App\7.0.20\Microsoft.Extensions.Logging.Console.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+19:24:37:597	'PetMingle.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App\7.0.20\Microsoft.Extensions.Logging.Debug.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+19:24:37:597	'PetMingle.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App\7.0.20\Microsoft.Extensions.Logging.EventSource.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+19:24:37:597	'PetMingle.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.NETCore.App\7.0.20\System.Diagnostics.Tracing.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+19:24:37:597	'PetMingle.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App\7.0.20\Microsoft.Extensions.DependencyInjection.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+19:24:37:597	'PetMingle.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App\7.0.20\Microsoft.AspNetCore.Server.Kestrel.Core.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+19:24:37:597	'PetMingle.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App\7.0.20\Microsoft.AspNetCore.Server.Kestrel.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+19:24:37:597	'PetMingle.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App\7.0.20\Microsoft.AspNetCore.Server.Kestrel.Transport.Quic.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+19:24:37:597	'PetMingle.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.NETCore.App\7.0.20\System.Net.Quic.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+19:24:37:597	'PetMingle.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App\7.0.20\Microsoft.AspNetCore.Server.IIS.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+19:24:37:597	'PetMingle.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App\7.0.20\Microsoft.AspNetCore.Server.IISIntegration.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+19:24:37:597	'PetMingle.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App\7.0.20\Microsoft.Extensions.FileProviders.Composite.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+19:24:37:597	'PetMingle.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.NETCore.App\7.0.20\System.Text.Encodings.Web.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+19:24:37:597	'PetMingle.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.NETCore.App\7.0.20\System.Runtime.Intrinsics.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+19:24:37:597	'PetMingle.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App\7.0.20\Microsoft.AspNetCore.Http.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+19:24:37:597	'PetMingle.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.NETCore.App\7.0.20\System.Diagnostics.DiagnosticSource.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+19:24:37:597	'PetMingle.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App\7.0.20\Microsoft.AspNetCore.Mvc.ApiExplorer.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+19:24:37:597	'PetMingle.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App\7.0.20\Microsoft.AspNetCore.Mvc.Abstractions.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+19:24:37:597	'PetMingle.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App\7.0.20\Microsoft.AspNetCore.Connections.Abstractions.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+19:24:37:597	'PetMingle.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App\7.0.20\Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+19:24:37:597	'PetMingle.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.NETCore.App\7.0.20\System.Net.Primitives.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+19:24:37:597	'PetMingle.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App\7.0.20\Microsoft.AspNetCore.Hosting.Server.Abstractions.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+19:24:37:597	'PetMingle.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App\7.0.20\Microsoft.AspNetCore.HostFiltering.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+19:24:37:597	'PetMingle.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App\7.0.20\Microsoft.AspNetCore.HttpOverrides.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+19:24:37:597	'PetMingle.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App\7.0.20\Microsoft.Extensions.ObjectPool.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+19:24:37:597	'PetMingle.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App\7.0.20\Microsoft.AspNetCore.Routing.Abstractions.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+19:24:37:597	'PetMingle.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.NETCore.App\7.0.20\System.ObjectModel.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+19:24:37:597	'PetMingle.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App\7.0.20\Microsoft.AspNetCore.Mvc.Razor.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+19:24:37:597	'PetMingle.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.NETCore.App\7.0.20\System.Runtime.Loader.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+19:24:37:597	'PetMingle.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App\7.0.20\Microsoft.AspNetCore.Authentication.Core.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+19:24:37:597	'PetMingle.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App\7.0.20\Microsoft.AspNetCore.Authentication.Abstractions.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+19:24:37:597	'PetMingle.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.NETCore.App\7.0.20\System.Security.Claims.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+19:24:37:597	'PetMingle.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App\7.0.20\Microsoft.AspNetCore.Authorization.Policy.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+19:24:37:597	'PetMingle.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App\7.0.20\Microsoft.AspNetCore.Authorization.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+19:24:37:597	'PetMingle.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App\7.0.20\Microsoft.AspNetCore.Mvc.DataAnnotations.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+19:24:37:597	'PetMingle.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App\7.0.20\Microsoft.AspNetCore.Razor.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+19:24:37:597	'PetMingle.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App\7.0.20\Microsoft.AspNetCore.Mvc.ViewFeatures.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+19:24:37:597	'PetMingle.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App\7.0.20\Microsoft.AspNetCore.Components.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+19:24:37:597	'PetMingle.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.NETCore.App\7.0.20\System.Linq.Expressions.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+19:24:37:597	'PetMingle.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App\7.0.20\Microsoft.JSInterop.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+19:24:37:597	'PetMingle.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App\7.0.20\Microsoft.AspNetCore.Components.Web.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+19:24:37:597	'PetMingle.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App\7.0.20\Microsoft.AspNetCore.DataProtection.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+19:24:37:597	'PetMingle.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App\7.0.20\Microsoft.AspNetCore.DataProtection.Abstractions.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+19:24:37:597	'PetMingle.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App\7.0.20\Microsoft.AspNetCore.Cryptography.Internal.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+19:24:37:597	'PetMingle.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App\7.0.20\Microsoft.AspNetCore.Antiforgery.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+19:24:37:597	'PetMingle.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App\7.0.20\Microsoft.Extensions.WebEncoders.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+19:24:37:597	'PetMingle.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App\7.0.20\Microsoft.Extensions.Caching.Abstractions.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+19:24:37:597	'PetMingle.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App\7.0.20\Microsoft.Extensions.Caching.Memory.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+19:24:37:597	'PetMingle.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App\7.0.20\Microsoft.AspNetCore.Mvc.TagHelpers.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+19:24:37:597	'PetMingle.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App\7.0.20\Microsoft.AspNetCore.SignalR.Core.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+19:24:37:597	'PetMingle.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App\7.0.20\Microsoft.AspNetCore.Components.Authorization.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+19:24:37:597	'PetMingle.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App\7.0.20\Microsoft.AspNetCore.SignalR.Common.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+19:24:37:597	'PetMingle.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App\7.0.20\Microsoft.AspNetCore.Http.Features.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+19:24:37:844	'PetMingle.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App\7.0.20\Microsoft.AspNetCore.WebSockets.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+19:24:37:844	'PetMingle.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App\7.0.20\Microsoft.AspNetCore.Http.Connections.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+19:24:37:844	'PetMingle.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App\7.0.20\Microsoft.AspNetCore.SignalR.Protocols.Json.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+19:24:37:844	'PetMingle.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App\7.0.20\Microsoft.AspNetCore.Authentication.Cookies.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+19:24:37:844	'PetMingle.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App\7.0.20\Microsoft.AspNetCore.Authentication.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+19:24:37:844	'PetMingle.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App\7.0.20\Microsoft.Extensions.Localization.Abstractions.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+19:24:37:844	'PetMingle.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App\7.0.20\Microsoft.AspNetCore.Http.Extensions.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+19:24:37:844	'PetMingle.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.NETCore.App\7.0.20\System.Console.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+19:24:37:844	'PetMingle.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.NETCore.App\7.0.20\System.Threading.Thread.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+19:24:37:844	'PetMingle.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App\7.0.20\System.Diagnostics.EventLog.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+19:24:37:844	'PetMingle.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.NETCore.App\7.0.20\System.Collections.Specialized.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+19:24:37:844	'PetMingle.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.NETCore.App\7.0.20\System.ComponentModel.TypeConverter.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+19:24:37:844	'PetMingle.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.NETCore.App\7.0.20\System.Net.Sockets.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+19:24:37:844	'PetMingle.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.NETCore.App\7.0.20\System.Threading.ThreadPool.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+19:24:37:844	'PetMingle.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App\7.0.20\System.IO.Pipelines.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+19:24:37:844	'PetMingle.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.NETCore.App\7.0.20\System.Reflection.Emit.Lightweight.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+19:24:37:844	'PetMingle.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.NETCore.App\7.0.20\System.Reflection.Emit.ILGeneration.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+19:24:37:844	'PetMingle.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.NETCore.App\7.0.20\System.Reflection.Primitives.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+19:24:37:844	'PetMingle.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App\7.0.20\Microsoft.AspNetCore.Http.Connections.Common.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+19:24:37:844	'PetMingle.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App\7.0.20\Microsoft.AspNetCore.Metadata.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+19:24:37:844	'PetMingle.exe' (CoreCLR: clrhost): Loaded 'Anonymously Hosted DynamicMethods Assembly'. 
+19:24:37:844	'PetMingle.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.NETCore.App\7.0.20\System.Threading.Channels.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+19:24:37:844	'PetMingle.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.NETCore.App\7.0.20\Microsoft.Win32.Registry.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+19:24:37:844	'PetMingle.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App\7.0.20\Microsoft.Extensions.FileSystemGlobbing.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+19:24:37:844	'PetMingle.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App\7.0.20\Microsoft.Net.Http.Headers.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+19:24:37:844	'PetMingle.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.NETCore.App\7.0.20\System.Private.Uri.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+19:24:37:844	'PetMingle.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.NETCore.App\7.0.20\System.Runtime.Numerics.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+19:24:37:844	'PetMingle.exe' (CoreCLR: clrhost): Loaded 'C:\Users\Oscar\Desktop\Dec 11 PM\PetMingleApp\PetMingle\bin\Release\net7.0\Microsoft.EntityFrameworkCore.Relational.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+19:24:37:844	'PetMingle.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App\7.0.20\Microsoft.AspNetCore.Html.Abstractions.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+19:24:37:844	'PetMingle.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.NETCore.App\7.0.20\System.ComponentModel.Annotations.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+19:24:37:844	'PetMingle.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.NETCore.App\7.0.20\System.Xml.XDocument.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+19:24:37:844	'PetMingle.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.NETCore.App\7.0.20\System.Private.Xml.Linq.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+19:24:37:844	'PetMingle.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.NETCore.App\7.0.20\System.Private.Xml.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+19:24:37:844	'PetMingle.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.NETCore.App\7.0.20\System.IO.MemoryMappedFiles.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+19:24:37:844	'PetMingle.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.NETCore.App\7.0.20\System.Runtime.Extensions.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+19:24:38:100	'PetMingle.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App\7.0.20\Microsoft.Extensions.FileProviders.Embedded.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+19:24:38:100	'PetMingle.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.NETCore.App\7.0.20\System.Xml.ReaderWriter.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+19:24:38:100	'PetMingle.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App\7.0.20\Microsoft.AspNetCore.Diagnostics.Abstractions.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+19:24:38:100	'PetMingle.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.NETCore.App\7.0.20\System.Net.Http.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+19:24:38:100	'PetMingle.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.NETCore.App\7.0.20\System.Security.Cryptography.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+19:24:38:100	'PetMingle.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.NETCore.App\7.0.20\System.Collections.NonGeneric.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+19:24:38:100	'PetMingle.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.NETCore.App\7.0.20\System.Net.Security.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+19:24:38:100	Microsoft.Hosting.Lifetime: Information: Now listening on: https://localhost:7285
+19:24:38:100	Microsoft.Hosting.Lifetime: Information: Now listening on: http://localhost:5079
+19:24:38:100	Microsoft.Hosting.Lifetime: Information: Application started. Press Ctrl+C to shut down.
+19:24:38:100	Microsoft.Hosting.Lifetime: Information: Hosting environment: Development
+19:24:38:100	Microsoft.Hosting.Lifetime: Information: Content root path: C:\Users\Oscar\Desktop\Dec 11 PM\PetMingleApp\PetMingle
+19:24:38:346	'PetMingle.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.NETCore.App\7.0.20\System.Security.Principal.Windows.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+19:24:38:593	'PetMingle.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.NETCore.App\7.0.20\System.Net.WebSockets.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+19:24:38:593	'PetMingle.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.NETCore.App\7.0.20\System.Threading.Tasks.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+19:24:38:593	'PetMingle.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.NETCore.App\7.0.20\System.Net.NameResolution.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+19:24:38:593	'PetMingle.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App\7.0.20\Microsoft.AspNetCore.WebUtilities.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+19:24:38:593	'PetMingle.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.NETCore.App\7.0.20\System.Collections.Immutable.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+19:24:38:593	'PetMingle.exe' (CoreCLR: clrhost): Loaded 'C:\Users\Oscar\Desktop\Dec 11 PM\PetMingleApp\PetMingle\bin\Release\net7.0\Microsoft.EntityFrameworkCore.SqlServer.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+19:24:38:593	'PetMingle.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.NETCore.App\7.0.20\System.Data.Common.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+19:24:38:593	'PetMingle.exe' (CoreCLR: clrhost): Loaded 'C:\Users\Oscar\Desktop\Dec 11 PM\PetMingleApp\PetMingle\bin\Release\net7.0\Microsoft.EntityFrameworkCore.Abstractions.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+19:24:38:593	'PetMingle.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.NETCore.App\7.0.20\System.Transactions.Local.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+19:24:38:593	'PetMingle.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App\7.0.20\Microsoft.AspNetCore.DataProtection.Extensions.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+19:24:38:843	'PetMingle.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.NETCore.App\7.0.20\System.Net.NetworkInformation.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+19:24:38:843	Microsoft.EntityFrameworkCore.Model.Validation: Warning: No store type was specified for the decimal property 'TotalPrice' on entity type 'Order'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+19:24:38:843	Microsoft.EntityFrameworkCore.Model.Validation: Warning: No store type was specified for the decimal property 'Price' on entity type 'OrderItem'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+19:24:39:105	Microsoft.EntityFrameworkCore.Model.Validation: Warning: No store type was specified for the decimal property 'Price' on entity type 'Product'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+19:24:39:105	'PetMingle.exe' (CoreCLR: clrhost): Loaded 'C:\Users\Oscar\Desktop\Dec 11 PM\PetMingleApp\PetMingle\bin\Release\net7.0\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+19:24:39:105	'PetMingle.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.NETCore.App\7.0.20\System.Text.RegularExpressions.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+19:24:39:105	'PetMingle.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.NETCore.App\7.0.20\System.Linq.Queryable.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+19:24:39:105	'PetMingle.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.NETCore.App\7.0.20\System.Threading.Timer.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+19:24:39:105	'PetMingle.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.NETCore.App\7.0.20\System.Resources.ResourceManager.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+19:24:39:105	'PetMingle.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.NETCore.App\7.0.20\System.Diagnostics.StackTrace.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+19:24:39:105	'PetMingle.exe' (CoreCLR: clrhost): Loaded 'C:\Users\Oscar\Desktop\Dec 11 PM\PetMingleApp\PetMingle\bin\Release\net7.0\System.Configuration.ConfigurationManager.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+19:24:39:105	'PetMingle.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.NETCore.App\7.0.20\netstandard.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+19:24:39:105	'PetMingle.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.NETCore.App\7.0.20\System.Diagnostics.Process.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+19:24:39:359	'PetMingle.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.NETCore.App\7.0.20\System.Net.WebClient.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+19:24:39:359	'PetMingle.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.NETCore.App\7.0.20\System.ComponentModel.EventBasedAsync.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+19:24:39:359	'PetMingle.exe' (CoreCLR: clrhost): Loaded 'C:\Users\Oscar\Desktop\Dec 11 PM\PetMingleApp\PetMingle\bin\Release\net7.0\Microsoft.Identity.Client.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+19:24:39:359	'PetMingle.exe' (CoreCLR: clrhost): Loaded 'C:\Users\Oscar\Desktop\Dec 11 PM\PetMingleApp\PetMingle\bin\Release\net7.0\System.Security.Permissions.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+19:24:39:359	'PetMingle.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.NETCore.App\7.0.20\System.Text.Encoding.CodePages.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+19:24:39:359	'PetMingle.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.NETCore.App\7.0.20\System.Diagnostics.TraceSource.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+19:24:39:359	'PetMingle.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.NETCore.App\7.0.20\System.Buffers.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+19:24:39:359	'PetMingle.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.NETCore.App\7.0.20\System.Runtime.InteropServices.RuntimeInformation.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+19:24:39:359	The thread '[Thread Destroyed]' (36728) has exited with code 0 (0x0).
+19:24:39:359	Microsoft.EntityFrameworkCore.Database.Command: Information: Executed DbCommand (23ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+19:24:39:359	SELECT [p].[ID], [p].[CompanyId], [p].[Description], [p].[Name], [p].[Price], [p].[ProductCoverUrl], [p].[StockQuantity], [c].[ID], [c].[Description], [c].[Name], [c].[StockQuantity], [t].[ProductId], [t].[CategoryId], [t].[ID], [t].[Description], [t].[Name]
+19:24:39:359	FROM [Products] AS [p]
+19:24:39:359	INNER JOIN [Companys] AS [c] ON [p].[CompanyId] = [c].[ID]
+19:24:39:359	LEFT JOIN (
+19:24:39:359	    SELECT [p0].[ProductId], [p0].[CategoryId], [c0].[ID], [c0].[Description], [c0].[Name]
+19:24:39:359	    FROM [ProductCategory] AS [p0]
+19:24:39:359	    INNER JOIN [Categories] AS [c0] ON [p0].[CategoryId] = [c0].[ID]
+19:24:39:359	) AS [t] ON [p].[ID] = [t].[ProductId]
+19:24:39:359	ORDER BY [p].[ID], [c].[ID], [t].[ProductId], [t].[CategoryId]
+19:24:39:359	Microsoft.EntityFrameworkCore.Database.Command: Information: Executed DbCommand (3ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+19:24:39:359	SELECT [c].[ID], [c].[Description], [c].[Name], [p].[ProductId], [p].[CategoryId]
+19:24:39:359	FROM [Categories] AS [c]
+19:24:39:359	LEFT JOIN [ProductCategory] AS [p] ON [c].[ID] = [p].[CategoryId]
+19:24:39:359	ORDER BY [c].[ID], [p].[ProductId]
+19:24:39:609	Microsoft.EntityFrameworkCore.Query: Warning: Compiling a query which loads related collections for more than one collection navigation, either via 'Include' or through projection, but no 'QuerySplittingBehavior' has been configured. By default, Entity Framework will use 'QuerySplittingBehavior.SingleQuery', which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'.
+19:24:39:609	'PetMingle.exe' (CoreCLR: clrhost): Loaded 'C:\Users\Oscar\Desktop\Dec 11 PM\PetMingleApp\PetMingle\bin\Release\net7.0\Microsoft.SqlServer.Server.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+19:24:39:609	Microsoft.EntityFrameworkCore.Database.Command: Information: Executed DbCommand (16ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='Text', CommandTimeout='30']
+19:24:39:609	SELECT [t].[Id], [t].[AccessFailedCount], [t].[ConcurrencyStamp], [t].[Email], [t].[EmailConfirmed], [t].[LockoutEnabled], [t].[LockoutEnd], [t].[NormalizedEmail], [t].[NormalizedUserName], [t].[PasswordHash], [t].[PhoneNumber], [t].[PhoneNumberConfirmed], [t].[RegistrationDate], [t].[SecurityStamp], [t].[TwoFactorEnabled], [t].[UserName], [t].[ID0], [r].[Id], [r].[ProductId], [r].[Rating], [r].[ReviewDate], [r].[ReviewText], [r].[UserId], [o].[ID], [o].[OrderDate], [o].[ShippingAddress], [o].[Status], [o].[TotalPrice], [o].[UserId], [t].[UserID], [t0].[ID], [t0].[CartId], [t0].[ProductId], [t0].[Quantity], [t0].[ID0], [t0].[CompanyId], [t0].[Description], [t0].[Name], [t0].[Price], [t0].[ProductCoverUrl], [t0].[StockQuantity]
+19:24:39:609	FROM (
+19:24:39:609	    SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[RegistrationDate], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName], [c].[ID] AS [ID0], [c].[UserID]
+19:24:39:609	    FROM [AspNetUsers] AS [a]
+19:24:39:609	    LEFT JOIN [Carts] AS [c] ON [a].[Id] = [c].[UserID]
+19:24:39:609	    WHERE [a].[Id] = @__userId_0
+19:24:39:609	) AS [t]
+19:24:39:609	LEFT JOIN [Reviews] AS [r] ON [t].[Id] = [r].[UserId]
+19:24:39:609	LEFT JOIN [Orders] AS [o] ON [t].[Id] = [o].[UserId]
+19:24:39:609	LEFT JOIN (
+19:24:39:609	    SELECT [c0].[ID], [c0].[CartId], [c0].[ProductId], [c0].[Quantity], [p].[ID] AS [ID0], [p].[CompanyId], [p].[Description], [p].[Name], [p].[Price], [p].[ProductCoverUrl], [p].[StockQuantity]
+19:24:39:609	    FROM [CartItems] AS [c0]
+19:24:39:609	    INNER JOIN [Products] AS [p] ON [c0].[ProductId] = [p].[ID]
+19:24:39:609	) AS [t0] ON [t].[ID0] = [t0].[CartId]
+19:24:39:609	ORDER BY [t].[Id], [t].[ID0], [r].[Id], [o].[ID], [t0].[ID]
+19:24:39:609	Microsoft.EntityFrameworkCore.Database.Command: Information: Executed DbCommand (1ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='Text', CommandTimeout='30']
+19:24:39:609	SELECT [t].[Id], [t].[AccessFailedCount], [t].[ConcurrencyStamp], [t].[Email], [t].[EmailConfirmed], [t].[LockoutEnabled], [t].[LockoutEnd], [t].[NormalizedEmail], [t].[NormalizedUserName], [t].[PasswordHash], [t].[PhoneNumber], [t].[PhoneNumberConfirmed], [t].[RegistrationDate], [t].[SecurityStamp], [t].[TwoFactorEnabled], [t].[UserName], [t].[ID0], [r].[Id], [r].[ProductId], [r].[Rating], [r].[ReviewDate], [r].[ReviewText], [r].[UserId], [o].[ID], [o].[OrderDate], [o].[ShippingAddress], [o].[Status], [o].[TotalPrice], [o].[UserId], [t].[UserID], [t0].[ID], [t0].[CartId], [t0].[ProductId], [t0].[Quantity], [t0].[ID0], [t0].[CompanyId], [t0].[Description], [t0].[Name], [t0].[Price], [t0].[ProductCoverUrl], [t0].[StockQuantity]
+19:24:39:609	FROM (
+19:24:39:609	    SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[RegistrationDate], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName], [c].[ID] AS [ID0], [c].[UserID]
+19:24:39:609	    FROM [AspNetUsers] AS [a]
+19:24:39:609	    LEFT JOIN [Carts] AS [c] ON [a].[Id] = [c].[UserID]
+19:24:39:609	    WHERE [a].[Id] = @__userId_0
+19:24:39:609	) AS [t]
+19:24:39:609	LEFT JOIN [Reviews] AS [r] ON [t].[Id] = [r].[UserId]
+19:24:39:609	LEFT JOIN [Orders] AS [o] ON [t].[Id] = [o].[UserId]
+19:24:39:609	LEFT JOIN (
+19:24:39:609	    SELECT [c0].[ID], [c0].[CartId], [c0].[ProductId], [c0].[Quantity], [p].[ID] AS [ID0], [p].[CompanyId], [p].[Description], [p].[Name], [p].[Price], [p].[ProductCoverUrl], [p].[StockQuantity]
+19:24:39:609	    FROM [CartItems] AS [c0]
+19:24:39:609	    INNER JOIN [Products] AS [p] ON [c0].[ProductId] = [p].[ID]
+19:24:39:609	) AS [t0] ON [t].[ID0] = [t0].[CartId]
+19:24:39:609	ORDER BY [t].[Id], [t].[ID0], [r].[Id], [o].[ID], [t0].[ID]
+19:24:39:859	Microsoft.EntityFrameworkCore.Database.Command: Information: Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+19:24:39:859	SELECT [p].[ID], [p].[CompanyId], [p].[Description], [p].[Name], [p].[Price], [p].[ProductCoverUrl], [p].[StockQuantity], [c].[ID], [c].[Description], [c].[Name], [c].[StockQuantity], [t].[ProductId], [t].[CategoryId], [t].[ID], [t].[Description], [t].[Name]
+19:24:39:859	FROM [Products] AS [p]
+19:24:39:859	INNER JOIN [Companys] AS [c] ON [p].[CompanyId] = [c].[ID]
+19:24:39:859	LEFT JOIN (
+19:24:39:859	    SELECT [p0].[ProductId], [p0].[CategoryId], [c0].[ID], [c0].[Description], [c0].[Name]
+19:24:39:859	    FROM [ProductCategory] AS [p0]
+19:24:39:859	    INNER JOIN [Categories] AS [c0] ON [p0].[CategoryId] = [c0].[ID]
+19:24:39:859	) AS [t] ON [p].[ID] = [t].[ProductId]
+19:24:39:859	ORDER BY [p].[ID], [c].[ID], [t].[ProductId], [t].[CategoryId]
+19:24:39:859	Microsoft.EntityFrameworkCore.Database.Command: Information: Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+19:24:39:859	SELECT [c].[ID], [c].[Description], [c].[Name], [p].[ProductId], [p].[CategoryId]
+19:24:39:859	FROM [Categories] AS [c]
+19:24:39:859	LEFT JOIN [ProductCategory] AS [p] ON [c].[ID] = [p].[CategoryId]
+19:24:39:859	ORDER BY [c].[ID], [p].[ProductId]
+19:24:39:859	Microsoft.EntityFrameworkCore.Database.Command: Information: Executed DbCommand (0ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='Text', CommandTimeout='30']
+19:24:39:859	SELECT [t].[Id], [t].[AccessFailedCount], [t].[ConcurrencyStamp], [t].[Email], [t].[EmailConfirmed], [t].[LockoutEnabled], [t].[LockoutEnd], [t].[NormalizedEmail], [t].[NormalizedUserName], [t].[PasswordHash], [t].[PhoneNumber], [t].[PhoneNumberConfirmed], [t].[RegistrationDate], [t].[SecurityStamp], [t].[TwoFactorEnabled], [t].[UserName], [t].[ID0], [r].[Id], [r].[ProductId], [r].[Rating], [r].[ReviewDate], [r].[ReviewText], [r].[UserId], [o].[ID], [o].[OrderDate], [o].[ShippingAddress], [o].[Status], [o].[TotalPrice], [o].[UserId], [t].[UserID], [t0].[ID], [t0].[CartId], [t0].[ProductId], [t0].[Quantity], [t0].[ID0], [t0].[CompanyId], [t0].[Description], [t0].[Name], [t0].[Price], [t0].[ProductCoverUrl], [t0].[StockQuantity]
+19:24:39:859	FROM (
+19:24:39:859	    SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[RegistrationDate], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName], [c].[ID] AS [ID0], [c].[UserID]
+19:24:39:859	    FROM [AspNetUsers] AS [a]
+19:24:39:859	    LEFT JOIN [Carts] AS [c] ON [a].[Id] = [c].[UserID]
+19:24:39:859	    WHERE [a].[Id] = @__userId_0
+19:24:39:859	) AS [t]
+19:24:39:859	LEFT JOIN [Reviews] AS [r] ON [t].[Id] = [r].[UserId]
+19:24:39:859	LEFT JOIN [Orders] AS [o] ON [t].[Id] = [o].[UserId]
+19:24:39:859	LEFT JOIN (
+19:24:39:859	    SELECT [c0].[ID], [c0].[CartId], [c0].[ProductId], [c0].[Quantity], [p].[ID] AS [ID0], [p].[CompanyId], [p].[Description], [p].[Name], [p].[Price], [p].[ProductCoverUrl], [p].[StockQuantity]
+19:24:39:859	    FROM [CartItems] AS [c0]
+19:24:39:859	    INNER JOIN [Products] AS [p] ON [c0].[ProductId] = [p].[ID]
+19:24:39:859	) AS [t0] ON [t].[ID0] = [t0].[CartId]
+19:24:39:859	ORDER BY [t].[Id], [t].[ID0], [r].[Id], [o].[ID], [t0].[ID]
+19:24:39:859	Microsoft.EntityFrameworkCore.Database.Command: Information: Executed DbCommand (1ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='Text', CommandTimeout='30']
+19:24:39:859	SELECT [t].[Id], [t].[AccessFailedCount], [t].[ConcurrencyStamp], [t].[Email], [t].[EmailConfirmed], [t].[LockoutEnabled], [t].[LockoutEnd], [t].[NormalizedEmail], [t].[NormalizedUserName], [t].[PasswordHash], [t].[PhoneNumber], [t].[PhoneNumberConfirmed], [t].[RegistrationDate], [t].[SecurityStamp], [t].[TwoFactorEnabled], [t].[UserName], [t].[ID0], [r].[Id], [r].[ProductId], [r].[Rating], [r].[ReviewDate], [r].[ReviewText], [r].[UserId], [o].[ID], [o].[OrderDate], [o].[ShippingAddress], [o].[Status], [o].[TotalPrice], [o].[UserId], [t].[UserID], [t0].[ID], [t0].[CartId], [t0].[ProductId], [t0].[Quantity], [t0].[ID0], [t0].[CompanyId], [t0].[Description], [t0].[Name], [t0].[Price], [t0].[ProductCoverUrl], [t0].[StockQuantity]
+19:24:39:859	FROM (
+19:24:39:859	    SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[RegistrationDate], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName], [c].[ID] AS [ID0], [c].[UserID]
+19:24:39:859	    FROM [AspNetUsers] AS [a]
+19:24:39:859	    LEFT JOIN [Carts] AS [c] ON [a].[Id] = [c].[UserID]
+19:24:39:859	    WHERE [a].[Id] = @__userId_0
+19:24:39:859	) AS [t]
+19:24:39:859	LEFT JOIN [Reviews] AS [r] ON [t].[Id] = [r].[UserId]
+19:24:39:859	LEFT JOIN [Orders] AS [o] ON [t].[Id] = [o].[UserId]
+19:24:39:859	LEFT JOIN (
+19:24:39:859	    SELECT [c0].[ID], [c0].[CartId], [c0].[ProductId], [c0].[Quantity], [p].[ID] AS [ID0], [p].[CompanyId], [p].[Description], [p].[Name], [p].[Price], [p].[ProductCoverUrl], [p].[StockQuantity]
+19:24:39:859	    FROM [CartItems] AS [c0]
+19:24:39:859	    INNER JOIN [Products] AS [p] ON [c0].[ProductId] = [p].[ID]
+19:24:39:859	) AS [t0] ON [t].[ID0] = [t0].[CartId]
+19:24:39:859	ORDER BY [t].[Id], [t].[ID0], [r].[Id], [o].[ID], [t0].[ID]
+19:24:41:876	Microsoft.EntityFrameworkCore.Database.Command: Information: Executed DbCommand (2ms) [Parameters=[@__user_Id_0='?' (Size = 450)], CommandType='Text', CommandTimeout='30']
+19:24:41:876	SELECT [t].[Id], [t].[AccessFailedCount], [t].[ConcurrencyStamp], [t].[Email], [t].[EmailConfirmed], [t].[LockoutEnabled], [t].[LockoutEnd], [t].[NormalizedEmail], [t].[NormalizedUserName], [t].[PasswordHash], [t].[PhoneNumber], [t].[PhoneNumberConfirmed], [t].[RegistrationDate], [t].[SecurityStamp], [t].[TwoFactorEnabled], [t].[UserName], [t].[ID0], [t].[UserID], [c0].[ID], [c0].[CartId], [c0].[ProductId], [c0].[Quantity]
+19:24:41:876	FROM (
+19:24:41:876	    SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[RegistrationDate], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName], [c].[ID] AS [ID0], [c].[UserID]
+19:24:41:876	    FROM [AspNetUsers] AS [a]
+19:24:41:876	    LEFT JOIN [Carts] AS [c] ON [a].[Id] = [c].[UserID]
+19:24:41:876	    WHERE [a].[Id] = @__user_Id_0
+19:24:41:876	) AS [t]
+19:24:41:876	LEFT JOIN [CartItems] AS [c0] ON [t].[ID0] = [c0].[CartId]
+19:24:41:876	ORDER BY [t].[Id], [t].[ID0]
+19:24:41:876	Microsoft.EntityFrameworkCore.Database.Command: Information: Executed DbCommand (2ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (DbType = Int32), @p2='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+19:24:41:876	SET IMPLICIT_TRANSACTIONS OFF;
+19:24:41:876	SET NOCOUNT ON;
+19:24:41:876	INSERT INTO [CartItems] ([CartId], [ProductId], [Quantity])
+19:24:41:876	OUTPUT INSERTED.[ID]
+19:24:41:876	VALUES (@p0, @p1, @p2);
+19:24:41:876	Microsoft.EntityFrameworkCore.Database.Command: Information: Executed DbCommand (1ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='Text', CommandTimeout='30']
+19:24:41:876	SELECT [t].[Id], [t].[AccessFailedCount], [t].[ConcurrencyStamp], [t].[Email], [t].[EmailConfirmed], [t].[LockoutEnabled], [t].[LockoutEnd], [t].[NormalizedEmail], [t].[NormalizedUserName], [t].[PasswordHash], [t].[PhoneNumber], [t].[PhoneNumberConfirmed], [t].[RegistrationDate], [t].[SecurityStamp], [t].[TwoFactorEnabled], [t].[UserName], [t].[ID0], [r].[Id], [r].[ProductId], [r].[Rating], [r].[ReviewDate], [r].[ReviewText], [r].[UserId], [o].[ID], [o].[OrderDate], [o].[ShippingAddress], [o].[Status], [o].[TotalPrice], [o].[UserId], [t].[UserID], [t0].[ID], [t0].[CartId], [t0].[ProductId], [t0].[Quantity], [t0].[ID0], [t0].[CompanyId], [t0].[Description], [t0].[Name], [t0].[Price], [t0].[ProductCoverUrl], [t0].[StockQuantity]
+19:24:41:876	FROM (
+19:24:41:876	    SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[RegistrationDate], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName], [c].[ID] AS [ID0], [c].[UserID]
+19:24:41:876	    FROM [AspNetUsers] AS [a]
+19:24:41:876	    LEFT JOIN [Carts] AS [c] ON [a].[Id] = [c].[UserID]
+19:24:41:876	    WHERE [a].[Id] = @__userId_0
+19:24:41:876	) AS [t]
+19:24:41:876	LEFT JOIN [Reviews] AS [r] ON [t].[Id] = [r].[UserId]
+19:24:41:876	LEFT JOIN [Orders] AS [o] ON [t].[Id] = [o].[UserId]
+19:24:41:876	LEFT JOIN (
+19:24:41:876	    SELECT [c0].[ID], [c0].[CartId], [c0].[ProductId], [c0].[Quantity], [p].[ID] AS [ID0], [p].[CompanyId], [p].[Description], [p].[Name], [p].[Price], [p].[ProductCoverUrl], [p].[StockQuantity]
+19:24:41:876	    FROM [CartItems] AS [c0]
+19:24:41:876	    INNER JOIN [Products] AS [p] ON [c0].[ProductId] = [p].[ID]
+19:24:41:876	) AS [t0] ON [t].[ID0] = [t0].[CartId]
+19:24:41:876	ORDER BY [t].[Id], [t].[ID0], [r].[Id], [o].[ID], [t0].[ID]
+19:24:43:875	Microsoft.EntityFrameworkCore.Database.Command: Information: Executed DbCommand (1ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='Text', CommandTimeout='30']
+19:24:43:875	SELECT [t].[Id], [t].[AccessFailedCount], [t].[ConcurrencyStamp], [t].[Email], [t].[EmailConfirmed], [t].[LockoutEnabled], [t].[LockoutEnd], [t].[NormalizedEmail], [t].[NormalizedUserName], [t].[PasswordHash], [t].[PhoneNumber], [t].[PhoneNumberConfirmed], [t].[RegistrationDate], [t].[SecurityStamp], [t].[TwoFactorEnabled], [t].[UserName], [t].[ID0], [r].[Id], [r].[ProductId], [r].[Rating], [r].[ReviewDate], [r].[ReviewText], [r].[UserId], [o].[ID], [o].[OrderDate], [o].[ShippingAddress], [o].[Status], [o].[TotalPrice], [o].[UserId], [t].[UserID], [t0].[ID], [t0].[CartId], [t0].[ProductId], [t0].[Quantity], [t0].[ID0], [t0].[CompanyId], [t0].[Description], [t0].[Name], [t0].[Price], [t0].[ProductCoverUrl], [t0].[StockQuantity]
+19:24:43:875	FROM (
+19:24:43:875	    SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[RegistrationDate], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName], [c].[ID] AS [ID0], [c].[UserID]
+19:24:43:875	    FROM [AspNetUsers] AS [a]
+19:24:43:875	    LEFT JOIN [Carts] AS [c] ON [a].[Id] = [c].[UserID]
+19:24:43:875	    WHERE [a].[Id] = @__userId_0
+19:24:43:875	) AS [t]
+19:24:43:875	LEFT JOIN [Reviews] AS [r] ON [t].[Id] = [r].[UserId]
+19:24:43:875	LEFT JOIN [Orders] AS [o] ON [t].[Id] = [o].[UserId]
+19:24:43:875	LEFT JOIN (
+19:24:43:875	    SELECT [c0].[ID], [c0].[CartId], [c0].[ProductId], [c0].[Quantity], [p].[ID] AS [ID0], [p].[CompanyId], [p].[Description], [p].[Name], [p].[Price], [p].[ProductCoverUrl], [p].[StockQuantity]
+19:24:43:875	    FROM [CartItems] AS [c0]
+19:24:43:875	    INNER JOIN [Products] AS [p] ON [c0].[ProductId] = [p].[ID]
+19:24:43:875	) AS [t0] ON [t].[ID0] = [t0].[CartId]
+19:24:43:875	ORDER BY [t].[Id], [t].[ID0], [r].[Id], [o].[ID], [t0].[ID]
+19:24:43:875	'PetMingle.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App\7.0.20\Microsoft.AspNetCore.Components.Forms.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+19:24:57:422	Microsoft.EntityFrameworkCore.Database.Command: Information: Executed DbCommand (1ms) [Parameters=[@__item_ProductId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+19:24:57:422	SELECT TOP(1) [p].[ID], [p].[CompanyId], [p].[Description], [p].[Name], [p].[Price], [p].[ProductCoverUrl], [p].[StockQuantity]
+19:24:57:422	FROM [Products] AS [p]
+19:24:57:422	WHERE [p].[ID] = @__item_ProductId_0
+19:24:57:422	Microsoft.EntityFrameworkCore.Database.Command: Information: Executed DbCommand (0ms) [Parameters=[@__item_ProductId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+19:24:57:422	SELECT TOP(1) [p].[ID], [p].[CompanyId], [p].[Description], [p].[Name], [p].[Price], [p].[ProductCoverUrl], [p].[StockQuantity]
+19:24:57:422	FROM [Products] AS [p]
+19:24:57:422	WHERE [p].[ID] = @__item_ProductId_0
+19:24:57:422	Microsoft.EntityFrameworkCore.Database.Command: Information: Executed DbCommand (1ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+19:24:57:422	SET NOCOUNT ON;
+19:24:57:422	DELETE FROM [CartItems]
+19:24:57:422	OUTPUT 1
+19:24:57:422	WHERE [ID] = @p0;
+19:24:57:422	DELETE FROM [CartItems]
+19:24:57:422	OUTPUT 1
+19:24:57:422	WHERE [ID] = @p1;
+19:24:57:422	Microsoft.EntityFrameworkCore.Database.Command: Information: Executed DbCommand (0ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='Text', CommandTimeout='30']
+19:24:57:422	SELECT [t].[Id], [t].[AccessFailedCount], [t].[ConcurrencyStamp], [t].[Email], [t].[EmailConfirmed], [t].[LockoutEnabled], [t].[LockoutEnd], [t].[NormalizedEmail], [t].[NormalizedUserName], [t].[PasswordHash], [t].[PhoneNumber], [t].[PhoneNumberConfirmed], [t].[RegistrationDate], [t].[SecurityStamp], [t].[TwoFactorEnabled], [t].[UserName], [t].[ID0], [r].[Id], [r].[ProductId], [r].[Rating], [r].[ReviewDate], [r].[ReviewText], [r].[UserId], [o].[ID], [o].[OrderDate], [o].[ShippingAddress], [o].[Status], [o].[TotalPrice], [o].[UserId], [t].[UserID], [t0].[ID], [t0].[CartId], [t0].[ProductId], [t0].[Quantity], [t0].[ID0], [t0].[CompanyId], [t0].[Description], [t0].[Name], [t0].[Price], [t0].[ProductCoverUrl], [t0].[StockQuantity]
+19:24:57:422	FROM (
+19:24:57:422	    SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[RegistrationDate], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName], [c].[ID] AS [ID0], [c].[UserID]
+19:24:57:422	    FROM [AspNetUsers] AS [a]
+19:24:57:422	    LEFT JOIN [Carts] AS [c] ON [a].[Id] = [c].[UserID]
+19:24:57:422	    WHERE [a].[Id] = @__userId_0
+19:24:57:422	) AS [t]
+19:24:57:422	LEFT JOIN [Reviews] AS [r] ON [t].[Id] = [r].[UserId]
+19:24:57:422	LEFT JOIN [Orders] AS [o] ON [t].[Id] = [o].[UserId]
+19:24:57:422	LEFT JOIN (
+19:24:57:422	    SELECT [c0].[ID], [c0].[CartId], [c0].[ProductId], [c0].[Quantity], [p].[ID] AS [ID0], [p].[CompanyId], [p].[Description], [p].[Name], [p].[Price], [p].[ProductCoverUrl], [p].[StockQuantity]
+19:24:57:422	    FROM [CartItems] AS [c0]
+19:24:57:422	    INNER JOIN [Products] AS [p] ON [c0].[ProductId] = [p].[ID]
+19:24:57:422	) AS [t0] ON [t].[ID0] = [t0].[CartId]
+19:24:57:422	ORDER BY [t].[Id], [t].[ID0], [r].[Id], [o].[ID], [t0].[ID]
+19:24:59:187	Microsoft.EntityFrameworkCore.Database.Command: Information: Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+19:24:59:187	SELECT [p].[ID], [p].[CompanyId], [p].[Description], [p].[Name], [p].[Price], [p].[ProductCoverUrl], [p].[StockQuantity], [c].[ID], [c].[Description], [c].[Name], [c].[StockQuantity], [t].[ProductId], [t].[CategoryId], [t].[ID], [t].[Description], [t].[Name]
+19:24:59:187	FROM [Products] AS [p]
+19:24:59:187	INNER JOIN [Companys] AS [c] ON [p].[CompanyId] = [c].[ID]
+19:24:59:187	LEFT JOIN (
+19:24:59:187	    SELECT [p0].[ProductId], [p0].[CategoryId], [c0].[ID], [c0].[Description], [c0].[Name]
+19:24:59:187	    FROM [ProductCategory] AS [p0]
+19:24:59:187	    INNER JOIN [Categories] AS [c0] ON [p0].[CategoryId] = [c0].[ID]
+19:24:59:187	) AS [t] ON [p].[ID] = [t].[ProductId]
+19:24:59:187	ORDER BY [p].[ID], [c].[ID], [t].[ProductId], [t].[CategoryId]
+19:24:59:187	Microsoft.EntityFrameworkCore.Database.Command: Information: Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+19:24:59:187	SELECT [c].[ID], [c].[Description], [c].[Name], [p].[ProductId], [p].[CategoryId]
+19:24:59:187	FROM [Categories] AS [c]
+19:24:59:187	LEFT JOIN [ProductCategory] AS [p] ON [c].[ID] = [p].[CategoryId]
+19:24:59:187	ORDER BY [c].[ID], [p].[ProductId]
+19:24:59:187	Microsoft.EntityFrameworkCore.Database.Command: Information: Executed DbCommand (0ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='Text', CommandTimeout='30']
+19:24:59:187	SELECT [t].[Id], [t].[AccessFailedCount], [t].[ConcurrencyStamp], [t].[Email], [t].[EmailConfirmed], [t].[LockoutEnabled], [t].[LockoutEnd], [t].[NormalizedEmail], [t].[NormalizedUserName], [t].[PasswordHash], [t].[PhoneNumber], [t].[PhoneNumberConfirmed], [t].[RegistrationDate], [t].[SecurityStamp], [t].[TwoFactorEnabled], [t].[UserName], [t].[ID0], [r].[Id], [r].[ProductId], [r].[Rating], [r].[ReviewDate], [r].[ReviewText], [r].[UserId], [o].[ID], [o].[OrderDate], [o].[ShippingAddress], [o].[Status], [o].[TotalPrice], [o].[UserId], [t].[UserID], [t0].[ID], [t0].[CartId], [t0].[ProductId], [t0].[Quantity], [t0].[ID0], [t0].[CompanyId], [t0].[Description], [t0].[Name], [t0].[Price], [t0].[ProductCoverUrl], [t0].[StockQuantity]
+19:24:59:187	FROM (
+19:24:59:187	    SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[RegistrationDate], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName], [c].[ID] AS [ID0], [c].[UserID]
+19:24:59:187	    FROM [AspNetUsers] AS [a]
+19:24:59:187	    LEFT JOIN [Carts] AS [c] ON [a].[Id] = [c].[UserID]
+19:24:59:187	    WHERE [a].[Id] = @__userId_0
+19:24:59:187	) AS [t]
+19:24:59:187	LEFT JOIN [Reviews] AS [r] ON [t].[Id] = [r].[UserId]
+19:24:59:187	LEFT JOIN [Orders] AS [o] ON [t].[Id] = [o].[UserId]
+19:24:59:187	LEFT JOIN (
+19:24:59:187	    SELECT [c0].[ID], [c0].[CartId], [c0].[ProductId], [c0].[Quantity], [p].[ID] AS [ID0], [p].[CompanyId], [p].[Description], [p].[Name], [p].[Price], [p].[ProductCoverUrl], [p].[StockQuantity]
+19:24:59:187	    FROM [CartItems] AS [c0]
+19:24:59:187	    INNER JOIN [Products] AS [p] ON [c0].[ProductId] = [p].[ID]
+19:24:59:187	) AS [t0] ON [t].[ID0] = [t0].[CartId]
+19:24:59:187	ORDER BY [t].[Id], [t].[ID0], [r].[Id], [o].[ID], [t0].[ID]
+19:24:59:187	Microsoft.EntityFrameworkCore.Database.Command: Information: Executed DbCommand (0ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='Text', CommandTimeout='30']
+19:24:59:187	SELECT [t].[Id], [t].[AccessFailedCount], [t].[ConcurrencyStamp], [t].[Email], [t].[EmailConfirmed], [t].[LockoutEnabled], [t].[LockoutEnd], [t].[NormalizedEmail], [t].[NormalizedUserName], [t].[PasswordHash], [t].[PhoneNumber], [t].[PhoneNumberConfirmed], [t].[RegistrationDate], [t].[SecurityStamp], [t].[TwoFactorEnabled], [t].[UserName], [t].[ID0], [r].[Id], [r].[ProductId], [r].[Rating], [r].[ReviewDate], [r].[ReviewText], [r].[UserId], [o].[ID], [o].[OrderDate], [o].[ShippingAddress], [o].[Status], [o].[TotalPrice], [o].[UserId], [t].[UserID], [t0].[ID], [t0].[CartId], [t0].[ProductId], [t0].[Quantity], [t0].[ID0], [t0].[CompanyId], [t0].[Description], [t0].[Name], [t0].[Price], [t0].[ProductCoverUrl], [t0].[StockQuantity]
+19:24:59:187	FROM (
+19:24:59:187	    SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[RegistrationDate], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName], [c].[ID] AS [ID0], [c].[UserID]
+19:24:59:187	    FROM [AspNetUsers] AS [a]
+19:24:59:187	    LEFT JOIN [Carts] AS [c] ON [a].[Id] = [c].[UserID]
+19:24:59:187	    WHERE [a].[Id] = @__userId_0
+19:24:59:187	) AS [t]
+19:24:59:187	LEFT JOIN [Reviews] AS [r] ON [t].[Id] = [r].[UserId]
+19:24:59:187	LEFT JOIN [Orders] AS [o] ON [t].[Id] = [o].[UserId]
+19:24:59:187	LEFT JOIN (
+19:24:59:187	    SELECT [c0].[ID], [c0].[CartId], [c0].[ProductId], [c0].[Quantity], [p].[ID] AS [ID0], [p].[CompanyId], [p].[Description], [p].[Name], [p].[Price], [p].[ProductCoverUrl], [p].[StockQuantity]
+19:24:59:187	    FROM [CartItems] AS [c0]
+19:24:59:187	    INNER JOIN [Products] AS [p] ON [c0].[ProductId] = [p].[ID]
+19:24:59:187	) AS [t0] ON [t].[ID0] = [t0].[CartId]
+19:24:59:187	ORDER BY [t].[Id], [t].[ID0], [r].[Id], [o].[ID], [t0].[ID]
+19:24:59:693	The thread '[Thread Destroyed]' (33104) has exited with code 0 (0x0).
+19:24:59:693	The thread '[Thread Destroyed]' (33188) has exited with code 0 (0x0).
+19:24:59:693	The thread '[Thread Destroyed]' (28540) has exited with code 0 (0x0).
+19:25:01:960	The program '[35700] PetMingle.exe' has exited with code 4294967295 (0xffffffff).

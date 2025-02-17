@@ -1,0 +1,84 @@
+﻿﻿#top-nav {
+    position: relative;
+    top: 0;
+    display: flex;
+    justify-content: start;
+    padding-block: 5px;
+    padding-inline: 50px;
+    border-bottom: solid 1px gray;
+    gap: 30px;
+}
+
+.fs-small {
+    font-size: 12px;
+}
+
+.fs-normal {
+    font-size: 14px;
+}
+
+.fs-big {
+    font-size: 16px;
+}
+
+.page-container {
+    max-width: 1250px;
+    margin: 20px auto;
+}
+
+#products {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    column-gap: 2.5rem;
+    max-width: 100%;
+}
+
+.product-title {
+    margin-block: 5px;
+}
+
+.product-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 200px;
+    overflow: hidden;
+}
+
+.product-cover {
+    height: 300px;
+/*    width: 200px;*/
+    object-fit: cover;
+    border-radius: 6px;
+/*    box-shadow: 1px 0px 29px 0px rgba(0,0,0,0.21);*/
+/*    transition: all 0.3s;*/
+}
+
+/*.product-cover:hover {
+        transform: scale(1.03);
+        transition: all 0.3s;
+    }*/
+.btn-outline {
+    display: inline-block;
+    padding: 8px 16px;
+    font-size: 14px;
+    color: #a9a667; /* Light olive color for text */
+    background-color: transparent;
+    border: 2px solid #a9a667; /* Outline color */
+    border-radius: 4px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+    .btn-outline:hover {
+        background-color: #a9a667; /* Light olive hover background */
+        color: white; /* White text on hover */
+    }
+
+    .btn-outline:active {
+        background-color: #8a8a45; /* Slightly darker olive for active state */
+        border-color: #8a8a45;
+    }
+

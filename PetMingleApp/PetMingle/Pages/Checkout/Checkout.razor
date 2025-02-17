@@ -1,0 +1,257 @@
+@page "/Checkout"
+
+@using Microsoft.AspNetCore.Identity
+@using PetMingle.Data.Repositories.Admin
+@using PetMingle.Data.Repositories.Customer
+@using PetMingle.Data
+@using PetMingle.Entities
+@using Microsoft.EntityFrameworkCore
+@using PetMingle.Services
+@using PetMingle.Shared
+@using System.Collections
+
+@inject IDbContextFactory<DataContext> ContextFactory
+@inject UserManager<ApplicationUser> UserManager
+@inject AuthenticationStateProvider AuthenticationStateProvider
+@inject NavigationManager NavigationManager
+
+@inject CartServices CartServices
+
+<div class="checkout-wrapper moving-bkg">
+    <div class="checkout-page-wrapper">
+        <div class="checkout-title text-center">Checkout</div>
+        <div class="checkout-page">
+            <div class="checkout-info">
+                <EditForm Model="_createdOrder" OnValidSubmit="Order" style="display: flex; flex-direction: column; align-items: center;">
+                    <DataAnnotationsValidator />
+                    <ValidationSummary />
+
+                    <div class="address-info-wrapper">
+                        <div class="address-title">Shipping Address</div>
+
+                        <div class="name-input">
+                            <div class="name-label">First Name:</div>
+                            <input type="text" id="firstname" pattern=".{1,}" required title="at least 1 character" />
+
+                            <div class="name-label">Last Name:</div>
+                            <input type="text" id="lastname" pattern=".{1,}" required title="at least 1 character" />
+                        </div>
+                        <div class="address-input">
+                            <div class="address-label">Address:</div>
+                            <InputText id="address" name="address" class="form-input form-control mb-1 site-acc-input" pattern=".{1,}" required title="at least 1 character" @bind-Value="shippingAddress" />
+                            <ValidationMessage For="@(() => shippingAddress)" />
+                        </div>
+                        <div class="zip-input">
+                            <div class="zip-label">Zip Code:</div>
+                            <InputText id="zipcode" name="zipcode" class="form-input form-control mb-1 site-acc-input" pattern="\d{5}" required title="exactly 5 digits" @bind-Value="shippingZipCode" />
+                            <ValidationMessage For="@(() => shippingZipCode)" />
+                        </div>
+                        <div class="state-info-wrapper">
+                            <div class="city-input">
+                                <div class="city-label">City:</div>
+                                <InputText id="city" name="city" class="form-input form-control mb-1 site-acc-input" pattern=".{1,}" required title="at least 1 character" @bind-Value="shippingCity" />
+                                <ValidationMessage For="@(() => shippingCity)" />
+                            </div>
+                            <div class="state-input">
+                                <div class="state-label">State:</div>
+                                <InputSelect id="state" name="state" class="form-input form-control mb-1 site-acc-input" required title="select a state" @bind-Value="shippingState">
+                                    <option value="">State</option>
+                                    @foreach (var state in _states)
+                                    {
+                                        <option id="@state">@state</option>
+                                    }
+                                </InputSelect>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="payment-info-wrapper">
+                        <div class="payment-title">Payment</div>
+
+                        <div class="payment-name">
+                            <div class="payment-card-name">Name:</div>
+                            <input type="text" id="cardname" name="cardname" pattern=".{1,}" required title="at least 1 character">
+                        </div>
+                        <div class="payment-card">
+                            <div class="payment-card-num">Credit Card Number:</div>
+                            <input type="text" id="cardnum" name="cardnumber" pattern="[2-6]\d{15}" required title="exactly 16 digits; first digit has to be 2, 3, 4, 5, or 6">
+                        </div>
+                        <div class="payment-card-details">
+                            @*<div class="payment-exp-month">Expiration month</div>*@
+                            <InputSelect id="expmonth" name="expmonth" required title="select a month" class="form-input form-control mb-1 site-acc-input" @bind-Value="CreditCardExpirationMonth">
+                                <option value="">MM</option>
+                                @foreach (var month in _months)
+                                {
+                                    <option id="@month">@month</option>
+                                }
+                            </InputSelect>
+
+                            @*<div class="payment-exp-year">Expiration year</div>*@
+                            <input type="text" id="expyear" name="expyear" placeholder="YY" pattern="\d{4}" required title="exactly 4 digits">
+
+                            @*<div class="payment-cvv">CVV:</div>*@
+                            <input type="text" id="cvv" name="cvv" placeholder="CVV" pattern="\d{3}" required title="exactly 3 digits">
+                        </div>
+                    </div>
+
+                    <div class="pay-now-btn-wrapper">
+                        <button class="btn btn-primary btn-lg" id="btn-submit" type="submit">Pay now</button>
+                    </div>
+                </EditForm>
+            </div>
+            <div class="checkout-details">
+                <div class="checkout-table-wrapper">
+                    <table class="checkout-table">
+                        <tbody>
+                            @foreach (var item in CartItems)
+                            {
+                                <tr class="checkout-table-row">
+                                    <td><img src="@item.Product.ProductCoverUrl" width="100" height="100" /></td>
+                                    <td class="text-start">
+                                        <div class="product-name">@item.Product.Name</div>
+                                        
+                                    </td>
+                                    <td class="text-end">
+                                        <div class="quantity-price">
+                                            @((item.Product.Price * item.Quantity).ToString("C2"))
+                                        </div>
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="order-wrapper">
+                    <div class="order-row">
+                        <div class="order-title">Subtotal:</div>
+                        <div class="order-sum">@CalculateOrderSum().ToString("C2")</div>
+                    </div>
+                    <div class="order-row">
+                        <div class="order-title">Tax (10%):</div>
+                        <div class="order-sum">@CalculateTax().ToString("C2")</div>
+                    </div>
+                    <div class="order-row">
+                        <div class="order-title">Total:</div>
+                        <div class="order-sum">@CalculateOrderWithTax().ToString("C2")</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@code {
+    //Adding the user
+    ApplicationUser _user { get; set; } = new ApplicationUser();
+
+    //List of states
+    List<string> _states = new List<string> { "Alabama", "Alaska", "Arizona", "Arkansas", "California", "Colorado", "Connecticut", "Delaware", "Florida", "Georgia", "Hawaii", "Idaho", "Illinois", "Indiana", "Iowa", "Kansas", "Kentucky", "Louisiana", "Maine", "Maryland", "Massachusetts", "Michigan", "Minnesota", "Mississippi", "Missouri", "Montana", "Nebraska", "Nevada", "New Hampshire", "New Jersey", "New Mexico", "New York", "North Carolina", "North Dakota", "Ohio", "Oklahoma", "Oregon", "Pennsylvania", "Rhode Island", "South Carolina", "South Dakota", "Tennessee", "Texas", "Utah", "Vermont", "Virginia", "Washington", "West Virginia", "Wisconsin", "Wyoming"};
+
+    List<string> _months = new List<string> { "01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12" };
+
+    [Parameter]
+    public List<CartItem> CartItems { get; set; }
+
+    protected override async Task OnInitializedAsync()
+    {
+        CartItems = new();
+        CartServices.OnChange += StateHasChanged;
+
+        //Adding the user
+        var authState = await AuthenticationStateProvider.GetAuthenticationStateAsync();
+        var user = authState.User;
+
+        if (user.Identity.IsAuthenticated)
+        {
+            using (var repo = new UserRepository(ContextFactory.CreateDbContext(), UserManager, AuthenticationStateProvider))
+            {
+                _user = await repo.GetUserAsync();
+                CartItems = _user.Cart?.CartItems?.ToList() ?? new List<CartItem>();
+            }
+        }
+
+        // StateHasChanged();
+    }
+
+    Order _createdOrder = new();
+
+    string shippingAddress = "";
+    string shippingCity = "";
+    string shippingState = "";
+    string shippingZipCode = "";
+
+    string CreditCardName = "";
+    string CreditCardNumber = "";
+    string CreditCardExpirationMonth = "";
+    string CreditCardExpirationYear = "";
+    string CreditCardCVV = "";
+
+    string validationMessage = "";
+    async Task ResetValidationMessage()
+    {
+        await Task.Delay(3000);
+        validationMessage = "";
+        await InvokeAsync(StateHasChanged);
+    }
+
+
+    decimal CalculateOrderSum()
+    {
+        decimal total = 0;
+        foreach (var item in CartItems)
+        {
+            total += item.Quantity * item.Product.Price;
+        }
+        return total;
+    }
+
+    //10% tax
+    decimal CalculateTax()
+    {
+        return CalculateOrderSum() / 10;
+    }
+
+    decimal CalculateOrderWithTax()
+    {
+        return CalculateOrderSum() + CalculateTax();
+    }
+
+    async Task Order()
+    {
+        _createdOrder.ShippingAddress = shippingAddress + ", " + shippingCity + ", " + shippingState + " " + shippingZipCode;
+        _createdOrder.User = _user;
+        _createdOrder.UserId = _user.Id;
+        _createdOrder.TotalPrice = CalculateOrderWithTax();
+        _createdOrder.OrderDate = DateTime.Now;
+        double expectedDays = 3;
+        _createdOrder.OrderDate = _createdOrder.OrderDate.AddDays(expectedDays);
+
+        Random random = new Random();
+        _createdOrder.ID = random.Next(); 
+
+        _createdOrder.OrderItem = new List<OrderItem>();
+        foreach (var item in CartItems)
+        {
+            OrderItem _orderItem = new OrderItem();
+            _orderItem.ID = item.ID;
+            _orderItem.OrderId = _createdOrder.ID;
+            _orderItem.Order = _createdOrder;
+            _orderItem.ProductId = item.ProductId;
+            _orderItem.Product = item.Product;
+            _orderItem.Quantity = item.Quantity;
+            _orderItem.Price = item.Product.Price;
+            _createdOrder.OrderItem.Add(_orderItem);
+        }
+
+        using (var repo = new UserRepository(ContextFactory.CreateDbContext(), UserManager, AuthenticationStateProvider))
+        {
+            await repo.DecrementStockAsync(CartItems); // Decrement stock
+            await repo.ClearCartAsync(_user);          // Clear cart
+        }
+        _createdOrder.UpdateOrder();
+        _user.Orders.Add(_createdOrder);
+
+        NavigationManager.NavigateTo($"/ReviewOrder");
+    }
+}

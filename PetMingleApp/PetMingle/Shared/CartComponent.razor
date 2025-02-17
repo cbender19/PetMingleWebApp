@@ -1,0 +1,205 @@
+﻿﻿@using Microsoft.AspNetCore.Identity;
+@using PetMingle.Data;
+@using PetMingle.Data.Repositories;
+@using PetMingle.Data.Repositories.Customer;
+@using PetMingle.Entities;
+@using PetMingle.Services;
+@using Microsoft.EntityFrameworkCore;
+
+@inject IJSRuntime JS
+@inject IDbContextFactory<DataContext> ContextFactory
+@inject NavigationManager navigationManager
+@inject AuthenticationStateProvider authenticationStateProvider
+@inject UserManager<ApplicationUser> userManager
+
+@inject CartServices CartService
+
+<div style="display:@(CartService.ShowCart ? "block" : "none")">
+    <div class="overlay @(CartService.StartAnimation ? "" : "open")" @onclick="async() => await HideCart()"></div>
+    <div class="side-cart @(CartService.StartAnimation ? "closed" : "open")">
+        <div class="cart-top-wrapper">
+            <div class="cart-title">Cart</div>
+            <div class="close" role="button" @onclick="async() => await HideCart()"><i class="fa-solid fa-xmark"></i></div>
+        </div>
+        <div class="products">
+
+            <table class="table">
+                <tbody>
+                    @foreach (var item in CartItems)
+                    {
+                        <tr class="cart-table-row">
+                            <td><img src="@item.Product.ProductCoverUrl" width="100" height="100" /></td>
+                            <td class="text-start">
+                                <div class="product-name">@item.Product.Name</div>
+                                <div class="d-flex justify-content-between gap-4 ">
+                                    <div class="quantity d-flex justify-content-between">
+                                        <button class="sign" @onclick="async() => await ChangeQuantity(-1, item)"><i class="fa-solid fa-minus"></i></button>
+                                        <span class="quantity-value">@item.Quantity</span>
+                                        <button class="sign" @onclick="async() => await ChangeQuantity(1, item)"><i class="fa-solid fa-plus"></i></button>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="text-end">
+                                <div class="quantity-price">
+                                    @((item.Product.Price * item.Quantity).ToString("C2"))
+                                </div>
+                                <div class="">
+                                    <button class="delete" @onclick="() =>  RemoveItemAsync(item)"><i class="fa-solid fa-trash-can"></i></button>
+                                </div>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+
+        </div>
+        <div class="order">
+            <div class="d-flex flex-row justify-content-between">
+                <div class="order-title">Subtotal:</div>
+                <div class="order-sum">@CalculateOrderSum().ToString("C2")</div>
+            </div>
+            <div class="w-100 m-auto my-3">
+                <button class="btn btn-success w-100 order-now-btn" @onclick="() => GoToCheckout()">Order Now</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+@code {
+
+    //Adding the user
+    ApplicationUser _user { get; set; } = new ApplicationUser();
+
+    [Parameter]
+    public List<CartItem> CartItems { get; set; }
+
+    protected override async Task OnInitializedAsync()
+    {
+        CartItems = new();
+        CartService.OnChange += StateHasChanged;
+
+        //Adding the user
+        var authState = await authenticationStateProvider.GetAuthenticationStateAsync();
+        var user = authState.User;
+
+        if (user.Identity.IsAuthenticated)
+        {
+            using (var repo = new UserRepository(ContextFactory.CreateDbContext(), userManager, authenticationStateProvider))
+            {
+                _user = await repo.GetUserAsync();
+                CartItems = _user.Cart?.CartItems?.ToList() ?? new List<CartItem>();
+            }
+        }
+
+        // StateHasChanged();
+    }
+
+    public void Dispose()
+    {
+        CartService.OnChange -= StateHasChanged;
+    }
+
+
+    private async Task HideCart()
+    {
+
+        CartService.StartAnimation = true;
+        await Task.Delay(300);
+        CartService.ShowCart = false;
+
+        CartService.StartAnimation = false;
+
+        // Update cart quantity indicator
+        await JS.InvokeVoidAsync("UpdateQuantityIndicator");
+    }
+
+
+
+    async Task ChangeQuantity(int number, CartItem item)
+    {
+        if ((item.Quantity <= 1 && number < 0))
+        {
+            return;
+        }
+
+        item.Quantity += number;
+        using (var repo = new UserRepository(
+        ContextFactory.CreateDbContext(),
+        userManager,
+        authenticationStateProvider))
+        {
+            await repo.UpdateItem(item);
+        }
+        // CartItems = user.Cart.CartItems.ToList();
+
+
+
+    }
+
+    async Task RemoveItemAsync(CartItem item)
+    {
+        using (var repo = new UserRepository(
+            ContextFactory.CreateDbContext(),
+            userManager,
+            authenticationStateProvider))
+        {
+            await repo.RemoveItemFromCart(item);
+            CartItems.Remove(item);
+        }
+    }
+
+    decimal CalculateOrderSum()
+    {
+        decimal total = 0;
+        foreach (var item in CartItems)
+        {
+            total += item.Quantity * item.Product.Price;
+        }
+        return total;
+    }
+
+    void GoToCheckout()
+    {
+        if (CartItems == null || !CartItems.Any())
+        {
+            JS.InvokeVoidAsync("alert", "Your Cart is empty");
+        }
+
+        else
+        {
+            navigationManager.NavigateTo($"/Checkout");
+        }
+
+    }
+
+    private async Task CheckoutAsync()
+    {
+        using (var repo = new UserRepository(
+            ContextFactory.CreateDbContext(),
+            userManager,
+            authenticationStateProvider))
+        {
+            // Fetch the user
+            var authState = await authenticationStateProvider.GetAuthenticationStateAsync();
+            var user = await repo.GetUserAsync();
+
+            if (user?.Cart?.CartItems != null && user.Cart.CartItems.Any())
+            {
+                // Decrement stock for all cart items
+                await repo.DecrementStockAsync(user.Cart.CartItems);
+
+                // Clear the cart
+                await repo.ClearCartAsync(user);
+
+                // Update UI
+                CartItems.Clear(); // Clear local CartItems list
+                await JS.InvokeVoidAsync("alert", "Checkout successful! Thank you for your order.");
+            }
+            else
+            {
+                await JS.InvokeVoidAsync("alert", "Your cart is empty.");
+            }
+        }
+
+    }
+}

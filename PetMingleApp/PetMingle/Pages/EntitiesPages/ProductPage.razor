@@ -1,0 +1,112 @@
+﻿@page "/Product/{id:int}"
+@using Microsoft.EntityFrameworkCore
+@using PetMingle.Data
+@using PetMingle.Data.Repositories.Admin;
+@using PetMingle.Data.Repositories.Customer;
+@using PetMingle.Entities;
+@using Microsoft.AspNetCore.Identity;
+@using PetMingle.Services;
+
+@inject IDbContextFactory<DataContext> ContextFactory
+@inject NavigationManager navigationManager
+@inject CartServices cartServices
+@inject UserManager<ApplicationUser> UserManager
+@inject AuthenticationStateProvider AuthenticationStateProvider
+
+<CartComponent CartItems="@cartItems"></CartComponent>
+
+<div class="product-view">
+    @if (_product != null)
+    {
+        <div class="product-view-info">
+            <!-- Product Image (on the left) -->
+            <div class="product-view-image">
+                <img src="@_product.ProductCoverUrl" alt="@_product.Name" class="img-fluid" />
+            </div>
+            <!-- Product Details (on the right) -->
+            <div class="product-view-details">
+                <h1 class="product-name">@_product.Name</h1>
+                <p class="product-description">@_product.Description</p>
+                <div class="product-view-price-wrapper">
+                    <div class="product-view-price">$@_product.Price</div>
+                    <div class="add-product-btn">
+                        <div class="btn-cover"></div>
+                        <button class="add-product-shop" @onclick="AddToCartAsync" disabled="@isLoading">
+                            @(isLoading ? "Adding..." : "Add to Cart")</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+    else if(isLoading)
+    {
+        <p>Loading product details...</p>
+    }
+    else
+    {
+        <p>Product not found.</p>
+    }
+</div>
+
+@code {
+    [Parameter]
+    public int ID { get; set; }
+
+    private Product? _product;
+    private bool isLoading = false;
+    List<CartItem> cartItems = new ();
+
+    protected override async Task OnInitializedAsync()
+    {
+        isLoading = true;
+        try
+        {
+            using var context = ContextFactory.CreateDbContext();
+            var repo = new ProductRepository(context);
+            _product = await repo.GetProductByIdAsync(ID);
+        }
+        finally
+        {
+            isLoading = false;
+        }
+    }
+
+    private async Task AddToCartAsync()
+    {
+        if (_product == null) return;
+
+        //isLoading = true;
+        
+            var authState = await AuthenticationStateProvider.GetAuthenticationStateAsync();
+            var currentUser = authState.User;
+
+            if (currentUser == null || !currentUser.Identity.IsAuthenticated)
+            {
+                // Redirect to login page if the user is not authenticated
+                navigationManager.NavigateTo("Identity/Account/Login", true);
+                return;
+            }
+
+            using var userRepo = new UserRepository(
+                ContextFactory.CreateDbContext(),
+                UserManager,
+                AuthenticationStateProvider);
+
+            // Add product to the cart
+            var applicationUser = new ApplicationUser { Id = currentUser.Claims.FirstOrDefault()?.Value };
+            var cartItem = await userRepo.AddToCartAsync(_product, applicationUser);
+
+            // Refresh cart items
+            var updatedUser = await userRepo.GetUserAsync();
+            cartItems = updatedUser?.Cart?.CartItems?.ToList() ?? new List<CartItem>();
+
+            // Open the cart UI
+            cartServices.OpenCart();
+        
+        
+        
+            isLoading = false;
+            await InvokeAsync(StateHasChanged);
+        
+    }
+}

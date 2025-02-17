@@ -1,0 +1,78 @@
+﻿@page "/AddCompany"
+
+@using PetMingle.Data;
+@using PetMingle.Data.Repositories.Admin;
+@using PetMingle.Entities;
+@using Microsoft.EntityFrameworkCore;
+
+@inject IDbContextFactory<DataContext> ContextFactory;
+
+<div class="add-company-wrapper">
+    <AuthorizeView Roles="Admin">
+        <Authorized Context="authContext">
+            <div class="add-company">
+                <h4 class="add-company-title">Add a new Company</h4>
+
+                <EditForm Model="_createdCompany" OnValidSubmit="SaveCompanyAsync" style="width: 35vw;">
+                    <DataAnnotationsValidator />
+                    <ValidationSummary />
+
+                    @*Company Name*@
+                    <label for="name" class="form-label">Name</label>
+                    <InputText id="name" class="form-input form-control mb-3 site-acc-input" @bind-Value="_createdCompany.Name" />
+                    <ValidationMessage For="@(() => _createdCompany.Name)" />
+
+
+                    @*Description*@
+                    <label for="description" class="form-label">Description</label>
+                    <InputText id="description" class="form-input form-control mb-3 site-acc-input" @bind-Value="_createdCompany.Description" />
+                    <ValidationMessage For="@(() => _createdCompany.Description)" />
+
+                    @*Stock Quantity*@
+                    <label for="stock-qty" class="form-label">Stock Quantity</label>
+                    <InputNumber id="stock-qty" class="form-input form-control site-acc-input" @bind-Value="_createdCompany.StockQuantity" />
+                    <ValidationMessage For="@(() => _createdCompany.StockQuantity)" />
+
+                    <div class="w-100 text-center p-5">
+                        <button class="btn btn-primary btn-lg" id="btn-submit" type="submit">Add</button>
+                    </div>
+
+                    <div class=" w-100 text-center p-5">
+                        <div class="alert-success"> @validationMessage</div>
+                    </div>
+                </EditForm>
+
+            </div>
+        </Authorized>
+        <NotAuthorized>
+            <div>Not Authorized.</div>
+        </NotAuthorized>
+    </AuthorizeView>
+</div>
+
+@code{
+    Company _createdCompany = new();
+
+    string validationMessage = "";
+    async Task ResetValidationMessage()
+    {
+        await Task.Delay(3000);
+        validationMessage = "";
+        await InvokeAsync(StateHasChanged);
+    }
+
+    async Task SaveCompanyAsync()
+    {
+        using (var repo = new CompanyRepository(ContextFactory.CreateDbContext()))
+        {
+            await repo.CreateCompanyAsync(_createdCompany);
+        }
+
+        _createdCompany = new Company();
+
+        validationMessage = "Company added succesfully";
+        await InvokeAsync(StateHasChanged);
+
+        await ResetValidationMessage();
+    }
+}

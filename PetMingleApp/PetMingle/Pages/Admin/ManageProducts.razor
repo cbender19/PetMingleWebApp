@@ -1,0 +1,113 @@
+﻿@page "/ManageProducts"
+
+@using PetMingle.Data;
+@using PetMingle.Data.Repositories.Admin;
+@using PetMingle.Entities;
+@using Microsoft.EntityFrameworkCore;
+
+@inject IDbContextFactory<DataContext> ContextFactory;
+@inject NavigationManager navigationManager;
+
+<AuthorizeView Roles="Admin">
+    <Authorized>
+        <div class="manage-products-page">
+            <div class="manage-products-title">Manage Products</div>
+
+            <div class="addto-btns-wrapper">
+                <div class="addto-btns">
+                    <div class="addto-btn-cover"></div>
+                    <NavLink href="AddCompany">Add Company</NavLink>
+                </div>
+                <div class="addto-btns">
+                    <div class="addto-btn-cover"></div>
+                    <NavLink href="AddCategory">Add Category</NavLink>
+                </div>
+                <div class="addto-btns">
+                    <div class="addto-btn-cover"></div>
+                    <NavLink href="AddProduct">Add Product</NavLink>
+                </div>
+            </div>
+
+            @if (_products.Count > 0)
+            {
+                <table class="admin-product-table">
+                    <thead>
+                        <tr>
+                            <th>Image</th>
+                            <th>Title</th>
+                            <th>Description</th>
+                            <th>Company</th>
+                            <th>Price</th>
+                            <th>Stock Quantity</th>
+                            <th>Categories</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var product in _products)
+                        {
+                            <tr>
+                                <td>
+                                    <div class="td-product-image" style="background: url(@product.ProductCoverUrl); background-size: contain;"></div>
+                                </td>
+                                <td>@product.Name</td>
+                                <td>@product.Description</td>
+                                <td>@product.Company.Name</td>
+                                <td>@product.Price</td>
+                                <td>@product.StockQuantity</td>
+                                <td>
+                                    @foreach (var category in product.ProductCategories)
+                                    {
+                                        <span>@category.Category.Name</span>
+                                    }
+                                </td>
+                                <td>
+                                    <div>
+                                        <button class="update-product-btn" @onclick="() => GoToUpdateProductPage(product.ID)">Update</button>
+                                        <button class="delete-product-btn" @onclick="() => DeleteProduct(product.ID)">Delete</button>
+                                    </div>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            }
+            
+        </div>
+
+
+    </Authorized>
+    <NotAuthorized>
+        <div>Not Authorized.</div>
+    </NotAuthorized>
+</AuthorizeView>
+
+@code {
+    List<Product> _products = new();
+
+    protected override async Task OnInitializedAsync()
+    {
+        using (var repo = new ProductRepository(ContextFactory.CreateDbContext()))
+        {
+            _products = await repo.GetAllProductsAsync();
+        }
+    }
+
+    async Task DeleteProduct(int id)
+    {
+        if (_products.Any(x => x.ID == id))
+        {
+            using (var repo = new ProductRepository(ContextFactory.CreateDbContext()))
+            {
+                _products.Remove(_products.FirstOrDefault(p => p.ID == id));
+                await repo.DeleteProductAsync(id);
+                await InvokeAsync(StateHasChanged);
+            }
+        }
+    }
+
+    void GoToUpdateProductPage(int id)
+    {
+        navigationManager.NavigateTo($"/UpdateProduct/{id}");
+    }
+}

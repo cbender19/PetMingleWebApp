@@ -1,0 +1,165 @@
+﻿@page "/UpdateProduct/{id:int}"
+
+@using PetMingle.Data;
+@using PetMingle.Data.Repositories.Admin;
+@using PetMingle.Entities;
+@using Microsoft.EntityFrameworkCore;
+
+@inject IDbContextFactory<DataContext> ContextFactory;
+
+<div class="add-product-wrapper">
+    <AuthorizeView Roles="Admin">
+        <Authorized Context="authContext">
+            <div class="add-product">
+                <h4 class="add-product-title">Update @_updatedProduct.Name</h4>
+
+                <EditForm Model="_updatedProduct" OnValidSubmit="UpdateProductAsync" style="width: 35vw; height: 60rem;">
+                    <DataAnnotationsValidator />
+                    <ValidationSummary />
+
+                    @*Product Name*@
+                    <label for="name" class="form-label">Name</label>
+                    <InputText id="name" class="form-input form-control mb-1" @bind-Value="_updatedProduct.Name" />
+                    <ValidationMessage For="@(() => _updatedProduct.Name)" />
+
+
+                    @*Description*@
+                    <label for="description" class="form-label">Description</label>
+                    <InputText id="description" class="form-input form-control mb-1" @bind-Value="_updatedProduct.Description" />
+                    <ValidationMessage For="@(() => _updatedProduct.Description)" />
+
+                    @*Company ID*@
+                    <label for="company" class="form-label">Company</label>
+                    <InputSelect class="form-select form-control" id="company" @bind-Value="_updatedProduct.CompanyId">
+                        @foreach (var company in _companies)
+                        {
+                            <option value="@company.ID">@company.Name</option>
+                        }
+                    </InputSelect>
+                    <ValidationMessage For="@(() => _updatedProduct.CompanyId)" />
+                    <a class="d-block mb-1" target="_blank" href="AddCompany" style="text-align: end;">Add a new Company</a>
+
+                    @*Price*@
+                    <label for="price" class="form-label">Price</label>
+                    <InputNumber id="price" class="form-control mb-1" @bind-Value="_updatedProduct.Price" />
+                    <ValidationMessage For="@(() => _updatedProduct.Price)" />
+
+                    @*Stock Quantity*@
+                    <label for="stock-qty" class="form-label">Stock Quantity</label>
+                    <InputNumber id="stock-qty" class="form-input form-control mb-1" @bind-Value="_updatedProduct.StockQuantity" />
+                    <ValidationMessage For="@(() => _updatedProduct.StockQuantity)" />
+
+                    @*Product Cover*@
+                    <div class="d-flex flex-row justify-content-between ">
+                        <div class="d-flex flex-column  w-100">
+                            <label for="book-cover-url" class="form-label">Product Cover Url</label>
+                            <InputText id="book-cover-url" class="form-control mb-1" @bind-Value="_updatedProduct.ProductCoverUrl" />
+                            <ValidationMessage For="@(() => _updatedProduct.ProductCoverUrl)" />
+                        </div>
+
+                        @*<img height="200" src="@_createdProduct.ProductCoverUrl" />*@
+                    </div>
+
+                    @*Product Categories*@
+                    <div class="d-flex flex-row flex-wrap my-1 align-content-start">
+                        <div class="w-100">Select a Product Category</div>
+                        @foreach (var category in _categories)
+                        {
+                            <div class="d-flex justify-content-end" style="gap: 0.5rem; margin-right: 2rem;">
+                                <label for="@category.Name">@category.Name</label>
+                                <input id="@category.Name" type="checkbox" checked="@_updatedProduct.ProductCategories.Any(pc => pc.CategoryId == category.ID)" @onchange="@(e => HandleCheckChange(e, category))" />
+                            </div>
+                        }
+                        <a class="d-block mb-1" target="_blank" href="AddCategory" style="width: 100%; text-align: end;">Add a new Category</a>
+                    </div>
+
+                    <div class="w-100 text-center">
+                        <button class="btn btn-success btn-lg" type="submit" style="margin: 1rem;">Update</button>
+                    </div>
+
+                    <div class=" w-100 text-center">
+                        <div class="alert-success"> @validationMessage</div>
+                    </div>
+                </EditForm>
+
+            </div>
+        </Authorized>
+        <NotAuthorized>
+            <div>Not Authorized.</div>
+        </NotAuthorized>
+    </AuthorizeView>
+</div>
+
+@code {
+    [Parameter]
+    public int Id { get; set; }
+
+    Product _updatedProduct = new();
+
+    List<Company> _companies = new();
+    List<Category> _categories = new();
+    List<ProductCategory> productCategories = new();
+
+    List<ProductCategory> _productCategories = new List<ProductCategory>();
+
+    protected override async Task OnInitializedAsync()
+    {
+        using (var repo = new CompanyRepository(ContextFactory.CreateDbContext()))
+        {
+            _companies = await repo.GetAllCompaniesAsync();
+        }
+
+        using (var repo = new CategoryRepository(ContextFactory.CreateDbContext()))
+        {
+            _categories = await repo.GetAllCategoriesAsync();
+        }
+
+        using (var repo = new ProductRepository(ContextFactory.CreateDbContext()))
+        {
+            _updatedProduct = await repo.GetProductByIdAsync(Id);
+            _productCategories = _updatedProduct.ProductCategories.ToList();
+        }
+    }
+
+    string validationMessage = "";
+    async Task ResetValidationMessage()
+    {
+        await Task.Delay(3000);
+        validationMessage = "";
+        await InvokeAsync(StateHasChanged);
+    }
+
+    async Task UpdateProductAsync()
+    {
+        using (var repo = new ProductRepository(ContextFactory.CreateDbContext()))
+        {
+            await repo.UpdateProductAsync(_updatedProduct);
+        }
+
+        validationMessage = "Product updated succesfully";
+        await InvokeAsync(StateHasChanged);
+
+        await ResetValidationMessage();
+    }
+
+    void HandleCheckChange(ChangeEventArgs e, Category category)
+    {
+        bool isChecked = (bool)e.Value;
+
+        if (isChecked)
+        {
+            _productCategories.Add(new ProductCategory
+            {
+                ProductId = _updatedProduct.ID,
+                CategoryId = category.ID
+            });
+
+            _updatedProduct.ProductCategories = _productCategories;
+        }
+        else
+        {
+            _productCategories.RemoveAll(pc => pc.CategoryId == category.ID);
+            _updatedProduct.ProductCategories = productCategories;
+        }
+    }
+}

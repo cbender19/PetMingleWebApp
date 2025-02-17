@@ -1,0 +1,512 @@
+﻿@page "/"
+@using Microsoft.AspNetCore.Identity
+@using PetMingle.Data.Repositories.Admin
+@using PetMingle.Data.Repositories.Customer
+@using PetMingle.Data
+@using PetMingle.Entities
+@using Microsoft.EntityFrameworkCore
+@using PetMingle.Services
+
+@inject IJSRuntime JS
+@inject IDbContextFactory<DataContext> ContextFactory
+@inject UserManager<ApplicationUser> UserManager
+@inject AuthenticationStateProvider AuthenticationStateProvider
+@inject NavigationManager NavigationManager
+@inject CartServices cartServices
+
+<PageTitle>PetMingle</PageTitle>
+
+@if (cartItems != null)
+{
+    <CartComponent CartItems="@cartItems"></CartComponent>
+}
+
+<div class="shop-page-wrapper">
+    <div class="shop-header-wrapper">
+        <div class="product-count-container">
+            <div class="product-count">@displayProducts.Count</div>
+            <div class="product-count-label">Products</div>
+        </div>
+        <div class="searchbar-container">
+            <div class="searchbar-wrapper"> 
+                <input id="searchbar" type="text" @bind="SearchBarInput" @bind:event="oninput" @onkeydown="e => CheckEnter(e, ReferenceSearch)" @ref=ReferenceSearch placeholder="Search..." />
+                <div class="search-btn-wrapper">
+                    <button class="search-btn" @onclick="UpdateList"><i class="fa-solid fa-magnifying-glass"></i></button>
+                </div>
+            </div>
+            <div class="searchbar-popup @DisplaySearchBox">
+                @foreach (var str in _strList)
+                {
+                    <div class="product-search-wrapper" @onclick='(() => SelectSearch(str))'>
+                        <div class="product-search">@str
+                            @if (str.Contains(':'))
+                            {
+                                <p class="product-search-type">(Product)</p>
+                            }
+                            else
+                            {
+                                <p class="product-search-type">(Category)</p>
+                            }
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+        <div class="filter-container">
+            <button class="product-filter" @onclick="() => ToggleFilter()">
+                Filter by
+                <i class="fa-solid fa-caret-up filter-sym @HideFilter"></i>
+                <i class="fa-solid fa-caret-down filter-sym @DisplayFilter"></i>
+            </button>
+            <div class="product-filter-container @DisplayFilter">
+                @foreach (var category in _categories)
+                {
+                    <div class="product-filter-wrapper">
+                        <label for="@category.Name">@category.Name</label>
+                        <input id="@category.Name" type="checkbox" @onchange="@(e => HandleCheckChange(e, category))" />
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+
+    <div class="shop-body-wrapper">
+        <div id="products">
+            @foreach (var product in displayProducts)
+            {
+                <div class="product-container">
+                    <!-- Product Image -->
+                    <div class="product-image" role="button" @onclick="() => GotoProductPage(product.ID)">
+                        <div class="product-cover" style="background: url(@product.ProductCoverUrl)"></div>
+                    </div>
+
+                    <!-- Product Details -->
+                    <div class="product-details">
+                        <div clsss="product-infos" style="width: 65%;">
+                            <div class="product-title fs-normal fw-bold" role="button" @onclick="() => GotoProductPage(product.ID)">
+                                @product.Name
+                            </div>
+                            <div class="product-price">
+                                $@product.Price
+                            </div>
+                        </div>
+                        
+                        <div class="add-product-btn">
+                            <div class="btn-cover"></div>
+                            <button class="add-product-shop" @onclick="() => AddToCartAsync(product)">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</div>
+
+@code {
+    // Main lists
+    List<Product> _products = new();
+    List<Category> _categories = new();
+
+    // Copied and Manipulating Lists
+    List<Product> products = new();
+    List<Category> filterCategories = new();
+    List<Product> displayProducts = new();
+
+    // Cart?
+    ApplicationUser user = new();
+    List<CartItem> cartItems;
+
+    // Searchbar List
+    List<string> strList = new List<string>();
+    List<string> _strList = new();
+
+    protected override async Task OnInitializedAsync()
+    {
+        using (var repo = new ProductRepository(ContextFactory.CreateDbContext()))
+        {
+            _products = await repo.GetAllProductsAsync();
+
+            foreach (var pro in _products)
+            {
+                strList.Add(pro.Name +": " +pro.Description);
+            }
+        }
+
+        products = _products;
+        displayProducts = _products;
+        SortProducts();
+
+        using (var repo = new CategoryRepository(ContextFactory.CreateDbContext()))
+        {
+            _categories = await repo.GetAllCategoriesAsync();
+
+            foreach( var cat in _categories)
+            {
+                strList.Add(cat.Name);
+            }
+        }
+
+        using var userRepo = new UserRepository(
+            ContextFactory.CreateDbContext(),
+            UserManager,
+            AuthenticationStateProvider);
+
+        var authState = await AuthenticationStateProvider.GetAuthenticationStateAsync();
+        var authUser = authState.User;
+
+        if (authUser.Identity.IsAuthenticated)
+        {
+            user = await userRepo.GetUserAsync();
+            cartItems = user.Cart.CartItems.ToList();
+        }
+    }
+
+    // async Task RemoveFromCartAsync(CartItem item)
+    // {
+    //     try
+    //     {
+    //         Check authentication state
+    //         var authState = await AuthenticationStateProvider.GetAuthenticationStateAsync();
+    //         var currentUser = authState.User;
+
+    //         if (currentUser == null || !currentUser.Identity.IsAuthenticated)
+    //         {
+    //             NavigationManager.NavigateTo("Identity/Account/Login", true);
+    //             return;
+    //         }
+
+    //         using var userRepo = new UserRepository(
+    //             ContextFactory.CreateDbContext(),
+    //             UserManager,
+    //             AuthenticationStateProvider);
+
+    //         Remove the item from the cart
+    //         await userRepo.RemoveItemFromCart(item);
+
+    //         Refresh the cart after deletion
+    //         user = await userRepo.GetUserAsync();
+    //         cartItems = user?.Cart?.CartItems?.ToList() ?? new List<CartItem>();
+
+    //         Update UI
+    //         await InvokeAsync(StateHasChanged);
+    //     }
+    //     catch (InvalidOperationException ex)
+    //     {
+    //         Console.WriteLine($"Error: {ex.Message}");
+    //     }
+    //     catch (Exception ex)
+    //     {
+    //         Console.WriteLine($"Error: {ex.Message}");
+    //     }
+    // }
+
+    async Task AddToCartAsync(Product product)
+    {
+        try
+        {
+            // Check authentication state
+            var authState = await AuthenticationStateProvider.GetAuthenticationStateAsync();
+            var currentUser = authState.User;
+
+            if (currentUser == null || !currentUser.Identity.IsAuthenticated)
+            {
+                // Redirect unauthenticated users to the login page
+                NavigationManager.NavigateTo("Identity/Account/Login", true);
+                return;
+            }
+
+            // Get the authenticated user's ID
+            var userId = currentUser.Claims.FirstOrDefault()?.Value;
+            if (string.IsNullOrEmpty(userId))
+            {
+                throw new InvalidOperationException("Authenticated user does not have a valid ID.");
+            }
+
+            // Initialize the repository
+            using var userRepo = new UserRepository(
+                ContextFactory.CreateDbContext(),
+                UserManager,
+                AuthenticationStateProvider);
+
+            // Add product to the cart //fix this to check if product exists in cart already. if it does increment quantity by 1.
+            var applicationUser = new ApplicationUser { Id = currentUser.Claims.FirstOrDefault()?.Value };
+            var cartItem = await userRepo.AddToCartAsync(product, applicationUser);
+
+            // Refresh user data and cart items
+            user = await userRepo.GetUserAsync();
+            cartItems = user?.Cart?.CartItems?.ToList() ?? new List<CartItem>();
+
+            // Open the cart UI
+            cartServices.OpenCart();
+
+            // Update UI state
+            await InvokeAsync(StateHasChanged);
+            
+            // await cartServices.OpenCartWithAutoCloseAsync();
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Error: {ex.Message}");
+        }
+    }
+
+    /// <summary>
+    /// tracks state of filter being visible
+    /// </summary>
+    public bool _state = true;
+
+    /// <summary>
+    /// Class names for showing or hiding filter
+    /// </summary>
+    public string DisplayFilter { get; set; } = "hidden";
+    public string HideFilter { get; set; } = "";
+
+    /// <summary>
+    /// toggles filters visibility
+    /// </summary>
+    public void ToggleFilter()
+    {
+        if (_state)
+        {
+            DisplayFilter = "";
+            HideFilter = "hidden";
+            _state = false;
+        }
+        else
+        {
+            DisplayFilter = "hidden";
+            HideFilter = "";
+            _state = true;
+        }
+    }
+
+    /// <summary>
+    /// the searchbars element reference
+    /// </summary>
+    public ElementReference ReferenceSearch { get; set; }
+
+    /// <summary>
+    /// Checks if user hits enter and updates product list then unfocuses the element
+    /// </summary>
+    /// <param name="e"></param>
+    /// <param name="element"></param>
+    public async void CheckEnter(KeyboardEventArgs e, ElementReference element)
+    {
+        if (e.Code == "Enter" || e.Code == "NumpadEnter")
+        {
+            UpdateList();
+            DisplaySearchBox = "hidden";
+            await JS.InvokeVoidAsync("UnfocusElement", element);
+        }
+    }
+
+    /// <summary>
+    /// Class name for displaying the searchbox or not
+    /// </summary>
+    public string DisplaySearchBox { get; set; } = "hidden";
+
+    /// <summary>
+    /// backing field of the search input
+    /// </summary>
+    private string? _searchInput;
+
+    /// <summary>
+    /// binded search input value
+    /// </summary>
+    public string SearchBarInput
+    {
+        get
+        {
+            if (_searchInput == null)
+            {
+                return "";
+            }
+            else
+            {
+                return _searchInput;
+            }
+        }
+        set
+        {
+            if (value != "")
+            {
+                _strList.Clear();
+                foreach (var str in strList)
+                {
+                    if (str.Contains(value, StringComparison.OrdinalIgnoreCase))
+                    {
+                        _strList.Add(str);
+                    }
+                }
+
+                if (_strList.Count > 0)
+                {
+                    DisplaySearchBox = "";
+
+                    if (value == _searchInput)
+                    {
+                        return;
+                    }
+
+                    _searchInput = value;
+                }
+                else
+                {
+                    DisplaySearchBox = "hidden";
+                    _searchInput = value;
+                }
+            }
+            else
+            {
+                DisplaySearchBox = "hidden";
+                _searchInput = "";
+                _strList.Clear();
+
+                products = _products;
+                SortProducts();
+            }
+        }
+    }
+
+    /// <summary>
+    /// Selects the str the user wants to search up and updates the product list
+    /// </summary>
+    /// <param name="str"></param>
+    public void SelectSearch(string str)
+    {
+        _searchInput = str;
+        DisplaySearchBox = "hidden";
+        UpdateList();
+    }
+
+    /// <summary>
+    /// updates the currently displayed product list by _searchInput
+    /// </summary>
+    public void UpdateList()
+    {
+        if (_searchInput == "")
+        {
+            products = _products;
+        }
+
+        string input;
+        if (_searchInput.Contains(':')) //get name of product if clicked by product name
+        {
+            input = _searchInput.Split(':')[0];
+        }
+        else
+        {
+            input = _searchInput;
+        }
+
+        products = new();
+        foreach (var product in _products)
+        {
+            if (product.Name.Contains(input, StringComparison.OrdinalIgnoreCase)) //gets product by name
+            {
+                products.Add(product);
+            }
+            else if (product.Description.Contains(input, StringComparison.OrdinalIgnoreCase)) //gets product by description
+            {
+                products.Add(product);
+            }
+
+            foreach (var cat in product.ProductCategories)
+            {
+                if (cat.Category.Name.Contains(input, StringComparison.OrdinalIgnoreCase)) //gets product by category
+                {
+                    if (!products.Contains(product))
+                    {
+                        products.Add(product);
+                        break;
+                    }
+                }
+            }
+        }
+
+        SortProducts();
+    }
+
+    /// <summary>
+    /// Populates a list of checked categories to be used to filter products
+    /// </summary>
+    /// <param name="e"></param>
+    /// <param name="category"></param>
+    void HandleCheckChange(ChangeEventArgs e, Category category)
+    {
+        bool isChecked = (bool)e.Value;
+
+        products = new();
+
+        if (isChecked)
+        {
+            filterCategories.Add(category);
+
+            UpdatedProductList();
+            SortProducts();
+        }
+        else
+        {
+            filterCategories.Remove(category);
+
+            UpdatedProductList();
+            SortProducts();
+        }
+    }
+
+    /// <summary>
+    /// Updates visible product list with products that have the categories checked
+    /// </summary>
+    public void UpdatedProductList()
+    {
+        if (filterCategories.Count == 0)
+        {
+            products = _products;
+        }
+
+        foreach (var filter in filterCategories)
+        {
+            foreach (var product in _products)
+            {
+                bool check = false;
+                foreach (var cat in product.ProductCategories)
+                {
+                    if (cat.Category.Name == filter.Name)
+                    {
+                        check = true;
+                    }
+                }
+
+                if (check)
+                {
+                    foreach (var pro in products)
+                    {
+                        if (pro.ID == product.ID)
+                        {
+                            return;
+                        }
+                    }
+
+                    products.Add(product);
+                }
+            }
+        }
+    }
+
+    /// <summary>
+    /// Call to update and sort the products being displayed
+    /// </summary>
+    public void SortProducts()
+    {
+        displayProducts = products.OrderBy(p => p.Name).ToList();
+    }
+
+    /// <summary>
+    /// Call to go to the products page
+    /// </summary>
+    /// <param name="id"></param>
+    void GotoProductPage(int id)
+    {
+        NavigationManager.NavigateTo($"/Product/{id}");
+    }
+}

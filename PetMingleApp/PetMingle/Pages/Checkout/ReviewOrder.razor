@@ -1,0 +1,85 @@
+﻿@page "/ReviewOrder"
+
+@using Microsoft.AspNetCore.Identity
+@using PetMingle.Data.Repositories.Admin
+@using PetMingle.Data.Repositories.Customer
+@using PetMingle.Data
+@using PetMingle.Entities
+@using Microsoft.EntityFrameworkCore
+@using PetMingle.Services
+
+@inject IDbContextFactory<DataContext> ContextFactory
+@inject UserManager<ApplicationUser> UserManager
+@inject AuthenticationStateProvider AuthenticationStateProvider
+@inject NavigationManager NavigationManager
+@inject CartServices CartServices
+
+<div class="checkout-wrapper moving-bkg">
+    <div class="checkout-page-wrapper">
+        <div class="checkout">
+            <h4 class="checkout-title text-center">Order Confirmed!</h4>
+        </div>
+
+        <div class="confirm-table-wrapper">
+            <table class="confirm-table">
+                <tbody>
+                    @if (_orders.Count > 0)
+                    {
+                        <tr class="order-table-row">
+                            <div class="d-flex flex-row justify-content-between">
+                                <div class="order-title">Order ID:</div>
+                                <div class="order-sum">@_order.ID.ToString()</div>
+                            </div>
+                            <div class="d-flex flex-row justify-content-between">
+                                <div class="order-title">Shipping Address:</div>
+                                <div class="order-sum">@_order.ShippingAddress.ToString()</div>
+                            </div>
+                            <div class="d-flex flex-row justify-content-between">
+                                <div class="order-title">Status:</div>
+                                <div class="order-sum">@_order.Status.ToString()</div>
+                            </div>
+                            <div class="d-flex flex-row justify-content-between">
+                                <div class="order-title">Expected delivery date:</div>
+                                <div class="order-sum">@_order.OrderDate.ToString().Split(' ')[0]</div>
+                            </div>
+                            <div class="d-flex flex-row justify-content-between">
+                                <div class="order-title">Grand Total:</div>
+                                <div class="order-sum">@_order.TotalPrice.ToString("C2")</div>
+                            </div>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+@code {
+    //Adding the user
+    ApplicationUser _user { get; set; } = new ApplicationUser();
+
+    ICollection<Order> _orders = new HashSet<Order>();
+
+    public Order _order { get; set; } = new();
+
+    protected override async Task OnInitializedAsync()
+    {
+        CartServices.OnChange += StateHasChanged;
+
+        //Adding the user
+        var authState = await AuthenticationStateProvider.GetAuthenticationStateAsync();
+        var user = authState.User;
+
+        if (user.Identity.IsAuthenticated)
+        {
+            using (var repo = new UserRepository(ContextFactory.CreateDbContext(), UserManager, AuthenticationStateProvider))
+            {
+                _user = await repo.GetUserAsync();
+                _orders = _user.Orders ?? new List<Order>();
+                _order = _orders.LastOrDefault();
+            }
+        }
+
+        // StateHasChanged();
+    }
+}

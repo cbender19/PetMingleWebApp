@@ -1,2 +1,2 @@
-# Phishing-Fishers
-CSCI 467 Phishing Fishers Team
+# Pet Mingle
+Senior Design Project
